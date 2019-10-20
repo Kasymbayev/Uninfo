@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\User;
+use App\Entities\User;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -28,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/account';
 
     /**
      * Create a new controller instance.
@@ -38,6 +40,43 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+
+    public function register(Request $request)
+    {
+        try{
+            $this->validator($request->all())->validate();
+        }catch(\Exception $e){
+            dd('Что то не то!');
+        }
+
+        $name = $request -> input('name');
+        $email = $request -> input('email');
+        $isAuth = $request ->has('remember') ? true : false;
+        $iin = $request -> input('iin');
+        $password = $request -> input('password');
+        $objUser = $this -> create([
+            'name' => $name,
+            'email' => $email,
+            'iin' => $iin,
+            'password' => $password,
+        ]);
+
+        if(!($objUser instanceof User)){
+            return back() -> with('error', 'Pizdes');
+        }
+
+        if($isAuth){
+
+            $this->guard()->login($objUser);
+        }
+
+        return redirect(route('account')) -> with('success', 'Nixuevenko');
     }
 
     /**
@@ -59,13 +98,14 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \App\Entities\User
      */
     protected function create(array $data)
     {
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'iin' => $data['iin'],
             'password' => Hash::make($data['password']),
         ]);
     }

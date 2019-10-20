@@ -1,0 +1,201 @@
+@media screen and (max-width: 768px ){
+
+    .navbar-brand h6{
+        color: #fff;
+        font-weight: bold;
+        font-size: 24px;
+        position: relative;
+        bottom: 10px;
+    }
+
+    .navbar-collapse{
+        border: none;
+    }
+
+    .navbar-nav.navbar-center {
+        position: relative;
+        left: 0;
+        transform: none;
+    }
+
+    .main_object h3{
+        width: auto;
+        text-transform: uppercase;
+        font-size: 42px;
+        font-weight: bold;
+        color: #fff;
+        text-align: left;
+        padding: 0 0px;
+    }
+
+    .main_object p{
+        width: auto;
+        color: #fff;
+        font-size: 18px;
+        margin-left: 0px;
+        font-weight: lighter;
+        text-align: left;
+    }
+
+    .search_section_inputs{
+        display:block;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .inputs{
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .inputs input{
+        width: 92%;
+        height: 45px;
+        padding-left: 15px;
+        outline: none;
+        margin: 5px 0;
+    }
+
+    .inputs select{
+        width: 92%;
+        height: 45px;
+        padding-left: 15px;
+        outline: none;
+    }
+
+    .border_l input{
+        border: none;
+        border-radius: 5px;
+    }
+
+    .border_c select{
+        border-radius: 5px;
+    }
+
+    .border_r input{
+        border: none;
+        border-radius: 5px;
+        background: #68C2E8;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .section_title h3{
+        font-size: 27px;
+    }
+
+    .section_title p{
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .main_object{
+        width: 90%;
+        height: 100vh;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .search_section{
+        width: 100%;
+        height: auto;
+        background: url('../images/main_screen.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: table;
+    }
+
+    .subject_cards{
+        width: auto;
+        display: block;
+    }
+
+    .subject_card{
+        width: 99%;
+        height: 325px;
+        background: #fff;
+        margin: 15px auto;
+    }
+
+    .card_header{
+        width: 100%;
+        height: 55px;
+        display: table;
+    }
+
+    .subject_title{
+        display: table-cell;
+        vertical-align: middle;
+        height: 65px;
+        background: #00859E;
+        padding-left: 0px;
+    }
+
+    .subject_title img{
+        width: 45px;
+        height: 45px;
+    }
+
+    .subject_title span{
+        color: #fff;
+        padding-left: 5px;
+        font-size: 18px;
+    }
+
+    .uni_cards{
+        display: block;
+        justify-content: center;
+    }
+
+    .uni_card{
+        width: 100%;
+        height: auto;
+        background: #fff;
+        margin: 15px 0px;
+    }
+
+    .uni_picture{
+        width: 100%;
+        position: relative;
+    }
+
+    .bottom_card_nav{
+        display: flex;
+        justify-content: center;
+    }
+
+    #footer{
+        width: 100%;
+        height: auto;
+        background: #ffff;
+    }
+
+    .footer_objects{
+        position: relative;
+        top: 0px;
+    }
+
+    .footer_objects h6{
+        font-size: 14px;
+        top: 5px;
+    }
+
+    .social_icons img{
+        width: 25px;
+        height: 25px;
+    }
+
+    .signup_wrapper{
+        width: 100%;
+        height: auto;
+        background: #fff;
+        margin: 0 auto;
+    }
+
+
+}
