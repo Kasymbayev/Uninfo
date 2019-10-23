@@ -37,10 +37,10 @@
         <span>У вас уже есть UNI аккаунт?</span>
         <br><br>
         <div class="signin">
-            <button type="submit">Войти</button>
+            <button type="submit" onClick=window.location.href="{{route('login')}}">Войти</button>
         </div>
         <div class="repeatonsite">
-            <a href="#">Вернуться на сайт</a>
+            <a href="{{route('index')}}">Вернуться на сайт</a>
         </div>
     </div>
 </div>

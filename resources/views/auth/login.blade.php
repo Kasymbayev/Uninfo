@@ -36,10 +36,10 @@
         <span>У вас нет аккаунта?</span>
         <br><br>
         <div class="signup">
-            <button type="submit">Создать аккаунт</button>
+            <button type="submit" onClick=window.location.href="{{route('register')}}">Создать аккаунт</button>
         </div>
         <div class="repeatonsite">
-            <a href="#">Вернуться на сайт</a>
+            <a href="{{route('index')}}">Вернуться на сайт</a>
         </div>
     </div>
 </div>
