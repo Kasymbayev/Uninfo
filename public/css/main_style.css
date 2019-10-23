@@ -1,0 +1,78 @@
+
+.title{
+    margin-top: 25px;
+}
+
+.action-button{
+    margin-top: 33px;
+}
+
+.action-button a{
+    font-size: 18px;
+    color: #fff;
+    background: #fcc107;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.action-button a:hover{
+    color: #fff;
+    text-decoration: none;
+    background: #118dff;
+    transition: all 0.5s ease-in-out;
+}
+
+.title h4{
+    font-size: 21px;
+    color: #fff;
+    background: #118dff;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.logo_title{
+    font-size: 21px;
+    font-weight: lighter;
+    color: #118dff;
+}
+
+
+.profile_title{
+    font-size: 18px;
+    font-weight: lighter;
+    color: #118dff;
+}
+
+.page_title{
+    font-size: 18px;
+    font-weight: lighter;
+    color: #118dff;
+}
+
+.uni_action a{
+    color: #fff;
+    font-size: 14px;
+}
+
+.uni_action a:hover{
+    color: #fff;
+}
+
+.form-wrapper{
+    width: 70%;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.form-wrapper label{
+    font-size: 18px;
+    color: #505050;
+}
+
+.uni_form input{
+    width: 100%;
+}
+
+

@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/account';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller ins tance.
@@ -50,7 +50,7 @@ class LoginController extends Controller
 
             $remember = $request -> has('remember') ? true : false;
             if(Auth::attempt(['email' => $request -> input('email'), 'password' => $request -> input('password')], $remember)){
-                return redirect(route('account'))->with('success', trans('messages.auth.successLogin'));
+                return redirect(route('index'))->with('success', trans('messages.auth.successLogin'));
             }
 
             return back()->with('error', trans('messages.auth.errorLogin'));

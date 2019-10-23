@@ -30,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/account';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -76,7 +76,7 @@ class RegisterController extends Controller
             $this->guard()->login($objUser);
         }
 
-        return redirect(route('account')) -> with('success', 'Nixuevenko');
+        return redirect(route('login')) -> with('success', 'Nixuevenko');
     }
 
     /**
