@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-md-5 logo">
                     <div class="logo_img">
-                        <img src="images/logo.png" alt="">
+                        <a href="{{route('index')}}"><img src="images/logo.png" alt=""></a>
                     </div>
                     <div class="descr_logo">
                         <span>Интересные вузы <br>Казахстана</span><br>
@@ -85,6 +85,11 @@
                             <li><a href="">Профессии</a></li>
                             <li><a href="">O нас</a></li>
                             <li><a href="">Обратная связь</a></li>
+                            @if(\Illuminate\Support\Facades\Auth::user()-> isAdmin == 1)
+                            <li>
+                                <a href="{{route('admin')}}">Управление сайтом</a>
+                            </li>
+                            @endif
                             <li class="hidden-md hidden-lg"><a href="">Мой кабинет</a></li>
                             <li class="hidden-md hidden-lg"><a href="">Создать кабинет</a></li>
                         </ul>

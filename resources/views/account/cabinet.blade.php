@@ -9,7 +9,7 @@
                     <ul  class="nav nav-tabs col-md-2 col-xs-12">
                         <div class="mycab">
                             <div class="cabtitle">
-                                <span class="account-type">Мой кабинет</span><br/>
+                                <span class="account-type">Привет,{{ \Illuminate\Support\Facades\Auth::user()-> name }}</span>
                             </div>
                         </div>
                         <li class="active">
@@ -19,6 +19,7 @@
                                 </div>
                             </div>
                         </li>
+
                         <li>
                             <div data-target="#lB" data-toggle="tab" class="nava">
                                 <div>

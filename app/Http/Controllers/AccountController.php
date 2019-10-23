@@ -10,7 +10,7 @@ class AccountController extends  Controller
 
     public function index()
     {
-        return view('account.index');
+        return view('account.cabinet');
     }
 
 }
