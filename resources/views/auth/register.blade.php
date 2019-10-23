@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -9,6 +9,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="/css/alertify.css">
 </head>
 <body>
 <div class="logo_signup">
@@ -24,11 +25,11 @@
 
             {!! csrf_field() !!}
 
-            <input type="text" placeholder="Как к вам обращаться ?" name="name"> <br>
-            <input type="email" placeholder="Укажите E-mail" name="email"> <br>
-            <input type="text" placeholder="Укажите ИИН" name="iin"> <br>
-            <input type="password" placeholder="Придумайте пароль" name="password"> <br>
-            <input type="password" placeholder="Повторите пароль" name="password_confirmation"> <br>
+            <input type="text" placeholder="Как к вам обращаться ?" name="name" required> <br>
+            <input type="email" placeholder="Укажите E-mail" name="email" required> <br>
+            <input type="text" placeholder="Укажите ИИН" name="iin" required> <br>
+            <input type="password" placeholder="Придумайте пароль" name="password" required> <br>
+            <input type="password" placeholder="Повторите пароль" name="password_confirmation" required> <br>
             <label for="remember">Запомнить меня</label>
             <input type="checkbox" name="remember" id="remember" style="width:auto; position: relative; top:2px;">
             <button type="submit">Зарегистрироваться</button>
@@ -44,5 +45,9 @@
         </div>
     </div>
 </div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/alertify.min.js"></script>
+@include('inc.messages')
 </body>
 </html>

@@ -863,3 +863,12 @@ body{
     color: #fff;
     text-decoration: none;
 }
+
+
+.ajs-message.ajs-error {
+    color: #e3e3e3;
+}
+
+.ajs-message.ajs-success {
+    color: #e3e3e3;
+}

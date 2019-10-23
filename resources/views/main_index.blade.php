@@ -1,3 +1,4 @@
+@include('inc.messages')
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -9,6 +10,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/alertify.css">
 </head>
 <body>
 
@@ -85,7 +87,8 @@
                             <li><a href="">Профессии</a></li>
                             <li><a href="">O нас</a></li>
                             <li><a href="">Обратная связь</a></li>
-                            @if(\Illuminate\Support\Facades\Auth::user()-> isAdmin == 1)
+                            @if(\Illuminate\Support\Facades\Auth::check() == 0)
+                            @elseif(\Illuminate\Support\Facades\Auth::user()-> isAdmin == 1)
                             <li>
                                 <a href="{{route('admin')}}">Управление сайтом</a>
                             </li>
@@ -102,10 +105,11 @@
 
     @yield('content')
 
-<script
-        src="https://code.jquery.com/jquery-2.0.0.min.js"
-        integrity="sha256-1IKHGl6UjLSIT6CXLqmKgavKBXtr0/jJlaGMEkh+dhw="
-        crossorigin="anonymous"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/alertify.min.js"></script>
+@include('inc.messages')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>
 </html>

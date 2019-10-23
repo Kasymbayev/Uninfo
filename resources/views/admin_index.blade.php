@@ -1,3 +1,4 @@
+@include('inc.messages')
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -8,6 +9,7 @@
     <!-- Main styles for this application-->
     <link rel="stylesheet" href="css/main_style.css">
     <link href="css/admin_style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/alertify.css">
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
 <header class="app-header navbar">
@@ -34,6 +36,10 @@
     </div>
 
     @yield('content')
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/alertify.min.js"></script>
+    @include('inc.messages')
 
 </div>
 <footer class="app-footer">

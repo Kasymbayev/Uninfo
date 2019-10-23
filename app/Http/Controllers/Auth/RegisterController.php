@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
+
 class RegisterController extends Controller
 {
     /*
@@ -52,7 +53,9 @@ class RegisterController extends Controller
         try{
             $this->validator($request->all())->validate();
         }catch(\Exception $e){
-            dd('Что то не то!');
+
+            return back()->with('error', 'Что-то пошло не так проверьте вводимые данные');
+
         }
 
         $name = $request -> input('name');
@@ -68,7 +71,7 @@ class RegisterController extends Controller
         ]);
 
         if(!($objUser instanceof User)){
-            return back() -> with('error', 'Pizdes');
+            return back() -> with('error', 'Что-то пошло не так проверьте данные');
         }
 
         if($isAuth){
@@ -76,7 +79,7 @@ class RegisterController extends Controller
             $this->guard()->login($objUser);
         }
 
-        return redirect(route('login')) -> with('success', 'Nixuevenko');
+        return redirect(route('login')) -> with('success', 'Вы успешно зарегистрировались');
     }
 
     /**

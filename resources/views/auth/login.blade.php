@@ -9,6 +9,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="/css/alertify.css">
 </head>
 <body>
 <div class="logo_signup">
@@ -24,8 +25,8 @@
 
             {!! csrf_field() !!}
 
-            <input type="text" placeholder="Укажите E-mail" name="email"> <br>
-            <input type="password" placeholder="Ваш пароль" name="password"> <br>
+            <input type="text" placeholder="Укажите E-mail" name="email" required> <br>
+            <input type="password" placeholder="Ваш пароль" name="password" required> <br>
             <label for="remember">Запомнить меня</label>
             <input type="checkbox" name="remember" id="remember" style="width:auto; position: relative; top:2px;">
             <div class="signin">
@@ -43,5 +44,8 @@
         </div>
     </div>
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/alertify.min.js"></script>
+@include('inc.messages')
 </body>
 </html>

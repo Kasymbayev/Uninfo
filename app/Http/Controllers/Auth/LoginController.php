@@ -50,14 +50,14 @@ class LoginController extends Controller
 
             $remember = $request -> has('remember') ? true : false;
             if(Auth::attempt(['email' => $request -> input('email'), 'password' => $request -> input('password')], $remember)){
-                return redirect(route('index'))->with('success', trans('messages.auth.successLogin'));
+                return redirect(route('index'))->with('success', 'Добро пожаловать на UNINFO');
             }
 
-            return back()->with('error', trans('messages.auth.errorLogin'));
+            return back()->with('error', 'Неверный E-email или пароль');
 
         }catch (ValidationException $e){
             \Log::error($e->getMessage());
-            return back()->with('error', trans('messages.auth.errorLogin'));
+            return back()->with('error', trans('Неверный E-email или пароль'));
         }
 
     }

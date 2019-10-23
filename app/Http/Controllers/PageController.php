@@ -16,7 +16,7 @@ class PageController extends Controller
 
     public function index(){
 
-        return view('pages.index');
+        return view('pages.index')->with('success', trans('Добро пожаловать на UNINFO'));
 
     }
 
