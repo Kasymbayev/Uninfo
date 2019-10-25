@@ -15,16 +15,16 @@
 <header class="app-header navbar">
     <div class="container-fluid">
         <div class="col-md-4 logo_title">UNINFO.KZ</div>
-        <div class="col-md-4 text-center page_title d-none d-lg-block">Admin Dashboard</div>
-        <div class="col-md-4 profile_title text-right d-none d-lg-block">Yertai Kassymbayev | <a href="{{route('index')}}">Вернуться в личный кабинет</a></div>
+        <div class="col-md-4 text-center page_title d-none d-lg-block">Welcome {{\Illuminate\Support\Facades\Auth::user()->name}}</div>
+        <div class="col-md-4 profile_title text-right d-none d-lg-block"><a href="{{route('index')}}">Вернуться в личный кабинет</a></div>
     </div>
 </header>
 <div class="app-body">
     <div class="sidebar">
         <nav class="sidebar-nav">
             <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Основные</a></li>
-                <li class="nav-item"><a class="nav-link" href="university.html">Университеты</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('admin')}}">Основные</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('admin_universities')}}">Университеты</a></li>
                 <li class="nav-item"><a class="nav-link" href="category.html">Категории</a></li>
                 <li class="nav-item"><a class="nav-link" href="qualification.html">Квалификации</a></li>
                 <li class="nav-item"><a class="nav-link" href="specialty.html">Специальности</a></li>

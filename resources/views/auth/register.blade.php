@@ -25,7 +25,8 @@
 
             {!! csrf_field() !!}
 
-            <input type="text" placeholder="Как к вам обращаться ?" name="name" required> <br>
+            <input type="text" placeholder="Ваше имя" name="firstname" required> <br>
+            <input type="text" placeholder="Ваша Фамилия" name="lastname" required> <br>
             <input type="email" placeholder="Укажите E-mail" name="email" required> <br>
             <input type="text" placeholder="Укажите ИИН" name="iin" required> <br>
             <input type="password" placeholder="Придумайте пароль" name="password" required> <br>

@@ -53,7 +53,7 @@
                 @else
                     <div class="col-md-4 auth_buttons">
                         <div class="cabinet_btn">
-                            <input type="button" value="Мой кабинет" onclick=window.location.href="{{route('login')}}">
+                            <input type="button" value="Войти кабинет" onclick=window.location.href="{{route('login')}}">
                         </div>
                         <div class="create_btn">
                             <input type="button" value="Создать кабинет" onclick=window.location.href="{{route('register')}}">
