@@ -1,5 +1,5 @@
 @extends('admin_index')
-
+@section('title','Админ | Основные')
 @section('content')
 
     <main class="main">

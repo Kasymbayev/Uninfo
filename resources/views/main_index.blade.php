@@ -44,7 +44,7 @@
                 @if(\Illuminate\Support\Facades\Auth::check())
                     <div class="col-md-4 auth_buttons">
                         <div class="cabinet_btn">
-                            <input type="button" value="{{\Illuminate\Support\Facades\Auth::user()->name}}" onclick=window.location.href="{{route('login')}}">
+                            <input type="button" value="{{\Illuminate\Support\Facades\Auth::user()->firstname}} {{\Illuminate\Support\Facades\Auth::user()->lastname}}" onclick=window.location.href="{{route('login')}}">
                         </div>
                         <div class="create_btn">
                             <input type="button" value="Выйти" onclick=window.location.href="{{route('logout')}}">

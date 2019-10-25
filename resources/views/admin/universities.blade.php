@@ -1,4 +1,5 @@
 @extends('admin_index')
+@section('title','Университеты')
 @section('content')
     <main class="main">
         <div class="container-fluid">
@@ -12,7 +13,7 @@
                     </div>
                     <div class="col-md-3 text-right">
                         <div class="action-button">
-                            <a href="#">Добавить университет</a>
+                            <a href="{{route('admin_add_university')}}">Добавить университет</a>
                         </div>
                     </div>
                 </div>

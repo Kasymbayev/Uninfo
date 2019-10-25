@@ -5,17 +5,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>UNINFO | Основные</title>
+    <title>@yield('title')</title>
     <!-- Main styles for this application-->
-    <link rel="stylesheet" href="css/main_style.css">
-    <link href="css/admin_style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/alertify.css">
+    <link rel="stylesheet" href="/css/main_style.css">
+    <link href="/css/admin_style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/alertify.css">
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
 <header class="app-header navbar">
     <div class="container-fluid">
-        <div class="col-md-4 logo_title">UNINFO.KZ</div>
-        <div class="col-md-4 text-center page_title d-none d-lg-block">Welcome {{\Illuminate\Support\Facades\Auth::user()->name}}</div>
+        <div class="col-md-4 logo_title"><a href="{{route('index')}}">UNINFO.KZ</a></div>
+        <div class="col-md-4 text-center page_title d-none d-lg-block">Welcome {{\Illuminate\Support\Facades\Auth::user()->firstname}} {{\Illuminate\Support\Facades\Auth::user()->lastname}}</div>
         <div class="col-md-4 profile_title text-right d-none d-lg-block"><a href="{{route('index')}}">Вернуться в личный кабинет</a></div>
     </div>
 </header>
@@ -25,11 +25,12 @@
             <ul class="nav">
                 <li class="nav-item"><a class="nav-link" href="{{route('admin')}}">Основные</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('admin_universities')}}">Университеты</a></li>
-                <li class="nav-item"><a class="nav-link" href="category.html">Категории</a></li>
-                <li class="nav-item"><a class="nav-link" href="qualification.html">Квалификации</a></li>
-                <li class="nav-item"><a class="nav-link" href="specialty.html">Специальности</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Добавить университет</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Добавить специальность</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('admin_categories')}}">Категории</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('admin_qualification')}}">Квалификации</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('admin_specialty')}}">Специальности</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('admin_add_university')}}">Добавить университет</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('admin_add_specialty')}}">Добавить специальность</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('admin_add_qualification')}}">Добавить квалификацию</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Посмотреть документы</a></li>
             </ul>
         </nav>

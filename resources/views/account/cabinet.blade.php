@@ -9,7 +9,7 @@
                     <ul  class="nav nav-tabs col-md-2 col-xs-12">
                         <div class="mycab">
                             <div class="cabtitle">
-                                <span class="account-type">Привет,{{ \Illuminate\Support\Facades\Auth::user()-> name }}</span>
+                                <span class="account-type">Здравствуйте, {{\Illuminate\Support\Facades\Auth::user()->firstname}}</span>
                             </div>
                         </div>
                         <li class="active">
