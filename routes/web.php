@@ -40,6 +40,7 @@ Route::group(['middleware' => 'admin'],function () {
     Route::get('/admin/add/university','Admin\AdminController@add_university')->name('admin_add_university');
     Route::get('/admin/add/specialty','Admin\AdminController@add_specialty')->name('admin_add_specialty');
     Route::get('/admin/add/qualification','Admin\AdminController@add_qualification')->name('admin_add_qualification');
+    Route::get('/admin/add/category','Admin\AdminController@add_category')->name('admin_add_category');
 
 
 });

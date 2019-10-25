@@ -16,18 +16,10 @@
                         <div class="row">
                             <form action="/" method="get">
                                 <div class="search_section_inputs">
-                                    <div class="col-md-3 col-xs-12 inputs border_l">
+                                    <div class="col-md-6 col-xs-12 inputs border_l">
                                         <input type="text" placeholder="Ваш предмет">
                                     </div>
-                                    <div class="col-md-3 col-xs-12 inputs border_c">
-                                        <select name="" id="">
-                                            <option aria-disabled="true">Квалификация</option>
-                                            <option value="Bachelor">Бакалавар</option>
-                                            <option value="Magistor">Магистратура</option>
-                                            <option value="Doctor">Докторантура</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-3 col-xs-12 inputs border_r">
+                                    <div class="col-md-6 col-xs-12 inputs border_r">
                                         <input type="button" value="Вперед">
                                     </div>
                                 </div>

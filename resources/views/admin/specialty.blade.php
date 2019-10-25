@@ -25,6 +25,7 @@
                         <th scope="col">Шифр</th>
                         <th scope="col">Специальность</th>
                         <th scope="col">Университет</th>
+                        <th scope="col">Направление</th>
                         <th scope="col">Действие</th>
                     </tr>
                     </thead>

@@ -1,5 +1,5 @@
 @extends('admin_index')
-@section('title','Админ | Категории')
+@section('title','Админ | Направления')
 @section('content')
     <main class="main">
         <div class="container-fluid">
@@ -13,7 +13,7 @@
                     </div>
                     <div class="col-md-3 text-right">
                         <div class="action-button">
-                            <a href="#">Добавить категорию</a>
+                            <a href="#">Добавить направление</a>
                         </div>
                     </div>
                 </div>

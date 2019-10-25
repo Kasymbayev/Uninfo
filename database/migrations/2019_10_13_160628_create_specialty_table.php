@@ -19,6 +19,8 @@ class CreateSpecialtyTable extends Migration
             $table->foreign('university_id')->references('id')->on('university');
             $table->string('specialty_name',25);
             $table->string('specialty_cipher',8);
+            $table->unsignedBigInteger('categories_id');
+            $table->foreign('categories_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }

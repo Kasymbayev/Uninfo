@@ -30,4 +30,6 @@ class AdminController extends Controller
 
     public function add_qualification(){return view('admin.add_qualification');}
 
+    public function add_category(){return view('admin.add_category');}
+
 }

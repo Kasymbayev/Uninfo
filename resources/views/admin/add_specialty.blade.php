@@ -27,9 +27,17 @@
                             <br>
                             <label for="category_of_university">Выберите университет</label>
                             <br>
+
                             <select name="category_of_university" id="category_of_university" class="form-control" multiple>
                                 <option value="">Международный университет информационных технологий</option>
                                 <option value="">Казахский национальный университет имени Аль-Фараби</option>
+                            </select>
+                            <br>
+                            <label for="category_of_university">Выберите направление специальности</label>
+                            <br>
+                            <select name="category_of_university" id="category_of_university" class="form-control" multiple>
+                                <option value="">Технический</option>
+                                <option value="">Медицинский</option>
                             </select>
 
                             <br>
