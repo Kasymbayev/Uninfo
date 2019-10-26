@@ -25,19 +25,25 @@
                             <br>
                             <input type="text" id="specialty_chiper" class="form-control" name="specialty_chiper" required>
                             <br>
-                            <label for="category_of_university">Выберите университет</label>
+                            <label for="university">Выберите университет</label>
                             <br>
 
-                            <select name="category_of_university" id="category_of_university" class="form-control" multiple>
+                            <select name="university" id="university" class="form-control" multiple>
                                 <option value="">Международный университет информационных технологий</option>
                                 <option value="">Казахский национальный университет имени Аль-Фараби</option>
                             </select>
                             <br>
-                            <label for="category_of_university">Выберите направление специальности</label>
+                            <label for="specialty_nap">Выберите направление специальности</label>
                             <br>
-                            <select name="category_of_university" id="category_of_university" class="form-control" multiple>
-                                <option value="">Технический</option>
-                                <option value="">Медицинский</option>
+                            <select name="specialty_nap" id="specialty_nap" class="form-control">
+                                <option value="">Технические науки и технологии</option>
+                            </select>
+
+                            <br>
+                            <label for="subjects">Выберите профильные предметы</label>
+                            <br>
+                            <select name="subjects" id="subjects" class="form-control">
+                                <option value="">Математика и Физика</option>
                             </select>
 
                             <br>

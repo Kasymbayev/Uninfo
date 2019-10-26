@@ -44,7 +44,7 @@
                 @if(\Illuminate\Support\Facades\Auth::check())
                     <div class="col-md-4 auth_buttons">
                         <div class="cabinet_btn">
-                            <input type="button" value="{{\Illuminate\Support\Facades\Auth::user()->firstname}} {{\Illuminate\Support\Facades\Auth::user()->lastname}}" onclick=window.location.href="{{route('login')}}">
+                            <input type="button" value="{{\Illuminate\Support\Facades\Auth::user()->firstname}} {{\Illuminate\Support\Facades\Auth::user()->lastname}}" onclick=window.location.href="{{route('account')}}">
                         </div>
                         <div class="create_btn">
                             <input type="button" value="Выйти" onclick=window.location.href="{{route('logout')}}">
@@ -53,7 +53,7 @@
                 @else
                     <div class="col-md-4 auth_buttons">
                         <div class="cabinet_btn">
-                            <input type="button" value="Войти кабинет" onclick=window.location.href="{{route('login')}}">
+                            <input type="button" value="Войти в кабинет" onclick=window.location.href="{{route('login')}}">
                         </div>
                         <div class="create_btn">
                             <input type="button" value="Создать кабинет" onclick=window.location.href="{{route('register')}}">
@@ -93,8 +93,13 @@
                                 <a href="{{route('admin')}}">Управление сайтом</a>
                             </li>
                             @endif
-                            <li class="hidden-md hidden-lg"><a href="">Мой кабинет</a></li>
-                            <li class="hidden-md hidden-lg"><a href="">Создать кабинет</a></li>
+                            @if(\Illuminate\Support\Facades\Auth::check())
+                            <li class="hidden-md hidden-lg"><a href="{{route('account')}}">{{\Illuminate\Support\Facades\Auth::user()->firstname}} {{\Illuminate\Support\Facades\Auth::user()->lastname}}</a></li>
+                            <li class="hidden-md hidden-lg"><a href="{{route('logout')}}">Выйти</a></li>
+                            @else
+                            <li class="hidden-md hidden-lg"><a href="{{route('login')}}">Войти в кабинет</a></li>
+                            <li class="hidden-md hidden-lg"><a href="{{route('register')}}">Создать кабинет</a></li>
+                            @endif
                         </ul>
                     </div>
                 </div>

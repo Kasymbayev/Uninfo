@@ -15,7 +15,7 @@
 <header class="app-header navbar">
     <div class="container-fluid">
         <div class="col-md-4 logo_title"><a href="{{route('index')}}">UNINFO.KZ</a></div>
-        <div class="col-md-4 text-center page_title d-none d-lg-block">Welcome {{\Illuminate\Support\Facades\Auth::user()->firstname}} {{\Illuminate\Support\Facades\Auth::user()->lastname}}</div>
+        <div class="col-md-4 text-center page_title d-none d-lg-block">Добро пожаловать, {{\Illuminate\Support\Facades\Auth::user()->firstname}} {{\Illuminate\Support\Facades\Auth::user()->lastname}}</div>
         <div class="col-md-4 profile_title text-right d-none d-lg-block"><a href="{{route('index')}}">Вернуться в личный кабинет</a></div>
     </div>
 </header>
@@ -25,13 +25,15 @@
             <ul class="nav">
                 <li class="nav-item"><a class="nav-link" href="{{route('admin')}}">Основные</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('admin_universities')}}">Университеты</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{route('admin_categories')}}">Направления</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{route('admin_qualification')}}">Квалификации</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{route('admin_specialty')}}">Специальности</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('admin_add_university')}}">Добавить университет</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{route('admin_add_specialty')}}">Добавить специальность</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('admin_type')}}">Типы ВУЗов</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('admin_add_type')}}">Добавить тип</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('admin_categories')}}">Категории</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('admin_add_category')}}">Добавить категорию</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('admin_qualification')}}">Квалификации</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('admin_add_qualification')}}">Добавить квалификацию</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{route('admin_add_category')}}">Добавить направление</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('admin_specialty')}}">Специальности</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('admin_add_specialty')}}">Добавить специальность</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Посмотреть документы</a></li>
             </ul>
         </nav>

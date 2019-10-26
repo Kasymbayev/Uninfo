@@ -15,8 +15,19 @@ class CreateUniversityTable extends Migration
     {
         Schema::create('university', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('abbreviation');
             $table->string('title');
             $table->text('description');
+            $table->text('rector');
+            $table->boolean('military_dep')->default(0);
+            $table->string('address');
+            $table->integer('phone_number');
+            $table->integer('university_code');
+            $table->string('university_type');
+            $table->integer('fax_number');
+            $table->string('email');
+            $table->string('website');
+            $table->string('university_img');
             $table->timestamps();
         });
     }

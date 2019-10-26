@@ -24,8 +24,9 @@
                         <th scope="col">ID</th>
                         <th scope="col">Шифр</th>
                         <th scope="col">Специальность</th>
-                        <th scope="col">Университет</th>
+                        <th scope="col">Квалификация</th>
                         <th scope="col">Направление</th>
+                        <th scope="col">Профильные предметы</th>
                         <th scope="col">Действие</th>
                     </tr>
                     </thead>
@@ -38,9 +39,9 @@
                         <td>
                             Информационные системы
                         </td>
-                        <td>
-                            Международный университет информационных технологий
-                        </td>
+                        <td>Бакалавр</td>
+                        <td>Технические науки и технологии</td>
+                        <td>Математика и Физика</td>
                         <td>
                             <div class="uni_action">
                                 <a href="#">Редактировать</a>  |  <a href="#">Удалить</a>
@@ -50,8 +51,6 @@
                     </tbody>
                 </table>
             </div>
-
-
         </div>
     </main>
 @stop

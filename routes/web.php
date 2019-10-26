@@ -1,6 +1,6 @@
 <?php
 
-//Guest
+//Guest Routes
 
 Route::get('/', 'PageController@index')->name('index');
 
@@ -15,7 +15,7 @@ Route::group(['middleware' => 'guest'], function(){
     Route::post('/login', 'Auth\LoginController@login');
 });
 
-//Account
+//Account Routes
 
 Route::group(['middleware' => 'auth'], function (){
     Route::get('/account', 'AccountController@index')->name('account');
@@ -26,21 +26,28 @@ Route::group(['middleware' => 'auth'], function (){
 
 });
 
-//Admin
+//Admin Routes
 
 Route::group(['middleware' => 'admin'],function () {
+
+    //GET Requests
 
     Route::get('/admin','Admin\AdminController@index')->name('admin');
     Route::get('/admin/universities','Admin\AdminController@universities')->name('admin_universities');
     Route::get('/admin/categories','Admin\AdminController@categories')->name('admin_categories');
     Route::get('/admin/qualification','Admin\AdminController@qualification')->name('admin_qualification');
     Route::get('/admin/specialty','Admin\AdminController@specialty')->name('admin_specialty');
+    Route::get('/admin/uni_type','Admin\AdminController@type')->name('admin_type');
 
+    //POST Requests
 
     Route::get('/admin/add/university','Admin\AdminController@add_university')->name('admin_add_university');
     Route::get('/admin/add/specialty','Admin\AdminController@add_specialty')->name('admin_add_specialty');
     Route::get('/admin/add/qualification','Admin\AdminController@add_qualification')->name('admin_add_qualification');
     Route::get('/admin/add/category','Admin\AdminController@add_category')->name('admin_add_category');
+    Route::get('/admin/add/type','Admin\AdminController@add_type')->name('admin_add_type');
 
 
 });
+
+//University Cabinet Routes

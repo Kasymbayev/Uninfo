@@ -22,8 +22,7 @@
                     <thead class="bg-info">
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Квалификация</th>
-                        <th scope="col">Университет</th>
+                        <th scope="col">Название квалификации</th>
                         <th scope="col">Действие</th>
                     </tr>
                     </thead>
@@ -32,9 +31,6 @@
                         <th scope="row">1</th>
                         <td>
                             Бакалавриат
-                        </td>
-                        <td>
-                            Международный университет информационных технологий
                         </td>
                         <td>
                             <div class="uni_action">
