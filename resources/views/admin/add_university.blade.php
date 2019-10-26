@@ -14,8 +14,8 @@
                 </div>
 
                 <div class="form-wrapper">
-                    <form enctype="multipart/form-data" action="/" method="post">
-
+                    <form enctype="multipart/form-data" action="{{route('admin_add_university')}}" method="post">
+                    {!! csrf_field() !!}
                         <div class="uni_form">
                             <div class="row">
                                 <div class="col-md-5">
@@ -63,7 +63,6 @@
                                     </label>
                                     <input id="university_img"
                                            type="file"
-                                           accept="image/*,image/jpeg"
                                            name="university_img"
                                            required>
                                 </div>
@@ -135,10 +134,9 @@
                                     <label for="university_type">Тип ВУЗа</label>
                                     <select name="university_type" id="university_type" class="form-control">
                                         <option value="" hidden>Выберите тип</option>
-                                        <option value="" >Академия</option>
-                                        <option value="">Институт</option>
-                                        <option value="">Консерватория</option>
-                                        <option value="">Университет</option>
+                                        @foreach($types as $type)
+                                            <option value="{{$type->id}}">{{$type->type_name}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="col-md-4">

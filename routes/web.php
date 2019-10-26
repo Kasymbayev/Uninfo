@@ -39,6 +39,7 @@ Route::group(['middleware' => 'admin'],function () {
 
     Route::get('/admin/universities','UniversityController@Universities')->name('admin_universities');
     Route::get('/admin/add/university','UniversityController@addUniversities')->name('admin_add_university');
+    Route::post('/admin/add/university','UniversityController@addRequestUniversity');
 
     //Categories
 
