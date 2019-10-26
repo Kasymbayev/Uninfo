@@ -87,8 +87,8 @@
                                     <select name="military_dep"
                                             id="military_dep"
                                             class="form-control">
-                                        <option value="0">Нет</option>
-                                        <option value="1">Есть</option>
+                                        <option value="Нет">Нет</option>
+                                        <option value="Есть">Есть</option>
                                     </select>
                                 </div>
                             </div>
@@ -205,7 +205,7 @@
                                     <select name="category_of_university" id="category_of_university" class="form-control">
                                         <option value="" hidden>Выберите категорию</option>
                                         @foreach($categories as $category)
-                                            <option value="{{$category->id}}">{{$category->category_name}}</option>
+                                            <option value="{{$category->category_name}}">{{$category->category_name}}</option>
                                         @endforeach
                                     </select>
                                 </div>

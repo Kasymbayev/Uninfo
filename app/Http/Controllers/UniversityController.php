@@ -13,9 +13,9 @@ class UniversityController extends Controller
 
     public function Universities(){
 
-
-
-        return view('admin.universities');
+        $ObjUniversity = new Universities();
+        $universities = $ObjUniversity->get();
+        return view('admin.universities',['universities' => $universities]);
 
     }
 
@@ -61,7 +61,8 @@ class UniversityController extends Controller
 
         $saveFlag = $university->save();
         if($saveFlag){
-            return view('admin.universities')->with('success','Университет успешно добавлен');
+            return redirect(route('admin_universities'))->with('success','Университет успешно добавлен')
+                ->with('success','Университет успешно добавлен');
         }
 
     }

@@ -8,13 +8,19 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Entities\Universities;
 use App\Http\Controllers\Controller;
 
 
 class AdminController extends Controller
 {
 
-    public function index(){return view('admin.index');}
+    public function index(){
+
+        $ObjUniversitites = new Universities();
+        $universities = $ObjUniversitites->get();
+        return view('admin.index',['universities' => $universities]);
+    }
 
     public function qualification(){return view('admin.qualification');}
 
