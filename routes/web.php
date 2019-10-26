@@ -38,7 +38,19 @@ Route::group(['middleware' => 'admin'],function () {
     //Universities
 
     Route::get('/admin/universities','UniversityController@Universities')->name('admin_universities');
-    Route::get('/admin/add/university','UniversityController@addUniversity')->name('admin_add_university');
+    Route::get('/admin/add/university','UniversityController@addUniversities')->name('admin_add_university');
+
+    //Categories
+
+    Route::get('/admin/categories','UniversityCategoriesController@Categories')->name('admin_categories');
+    Route::get('/admin/add/category','UniversityCategoriesController@addCategories')->name('admin_add_category');
+    Route::post('/admin/add/category','UniversityCategoriesController@addRequestCategories');
+
+    //Types
+
+    Route::get('/admin/uni_type','UniversityTypeController@Types')->name('admin_type');
+    Route::get('/admin/add/type','UniversityTypeController@addTypes')->name('admin_add_type');
+    Route::post('/admin/add/type','UniversityTypeController@addRequestTypes');
 
     //Qualifications
 
@@ -50,17 +62,6 @@ Route::group(['middleware' => 'admin'],function () {
     Route::get('/admin/specialty','Admin\AdminController@specialty')->name('admin_specialty');
     Route::get('/admin/add/specialty','Admin\AdminController@add_specialty')->name('admin_add_specialty');
 
-    //Types
-
-    Route::get('/admin/uni_type','UniversityTypeController@Type')->name('admin_type');
-    Route::get('/admin/add/type','UniversityTypeController@addTypes')->name('admin_add_type');
-    Route::post('/admin/add/type','UniversityTypeController@addRequestType');
-
-    //Categories
-
-    Route::get('/admin/categories','UniversityCategoriesController@Categories')->name('admin_categories');
-    Route::get('/admin/add/category','UniversityCategoriesController@addCategories')->name('admin_add_category');
-    Route::post('/admin/add/category','UniversityCategoriesController@addRequestCategories');
 
 });
 

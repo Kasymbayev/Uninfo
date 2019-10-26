@@ -14,8 +14,8 @@
                 </div>
 
                 <div class="form-wrapper">
-                    <form action="/" method="post">
-
+                    <form action="{{route('admin_add_type')}}" method="post">
+                        {!! csrf_field() !!}
                         <div class="uni_form">
                             <label for="type_name">Название типа</label>
                             <br>

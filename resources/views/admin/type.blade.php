@@ -27,17 +27,19 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>
-                            Академия
-                        </td>
-                        <td>
-                            <div class="uni_action">
-                                <a href="#">Редактировать</a>  |  <a href="#">Удалить</a>
-                            </div>
-                        </td>
-                    </tr>
+                    @foreach($types as $type)
+                        <tr>
+                            <th scope="row">{{$type->id}}</th>
+                            <td>
+                                {{$type->type_name}}
+                            </td>
+                            <td>
+                                <div class="uni_action">
+                                    <a href="#">Редактировать</a>  |  <a href="#">Удалить</a>
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

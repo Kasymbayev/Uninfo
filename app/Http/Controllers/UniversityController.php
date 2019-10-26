@@ -15,7 +15,7 @@ class UniversityController extends Controller
 
     }
 
-    public function addUniversity()
+    public function addUniversities()
     {
         $objCategories = new UniversityCategories();
         $categories = $objCategories->get();
