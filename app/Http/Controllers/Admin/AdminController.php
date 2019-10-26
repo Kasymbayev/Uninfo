@@ -16,10 +16,6 @@ class AdminController extends Controller
 
     public function index(){return view('admin.index');}
 
-    public function universities(){return view('admin.universities');}
-
-    public function categories(){return view('admin.categories');}
-
     public function qualification(){return view('admin.qualification');}
 
     public function specialty(){return view('admin.specialty');}
@@ -31,8 +27,6 @@ class AdminController extends Controller
     public function add_specialty(){return view('admin.add_specialty');}
 
     public function add_qualification(){return view('admin.add_qualification');}
-
-    public function add_category(){return view('admin.add_category');}
 
     public function add_type(){return view('admin.add_type');}
 

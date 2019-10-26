@@ -14,8 +14,8 @@
                 </div>
 
                 <div class="form-wrapper">
-                    <form action="/" method="post">
-
+                    <form action="{{route('admin_add_category')}}" method="post">
+                        {!! csrf_field() !!}
                         <div class="uni_form">
                             <label for="category_name">Название категории</label>
                             <br>

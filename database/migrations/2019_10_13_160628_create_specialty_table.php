@@ -17,10 +17,10 @@ class CreateSpecialtyTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('university_id');
             $table->foreign('university_id')->references('id')->on('university');
+            $table->unsignedBigInteger('qualification_id');
+            $table->foreign('qualification_id')->references('id')->on('qualification');
             $table->string('specialty_name',25);
             $table->string('specialty_cipher',8);
-            $table->unsignedBigInteger('categories_id');
-            $table->foreign('categories_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }

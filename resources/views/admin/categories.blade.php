@@ -13,7 +13,7 @@
                     </div>
                     <div class="col-md-3 text-right">
                         <div class="action-button">
-                            <a href="#">Добавить категорию</a>
+                            <a href="{{route('admin_add_category')}}">Добавить категорию</a>
                         </div>
                     </div>
                 </div>
@@ -27,10 +27,11 @@
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach($categories as $category)
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row">{{$category -> id}}</th>
                         <td>
-                            Акционированный
+                            {{$category -> category_name}}
                         </td>
                         <td>
                             <div class="uni_action">
@@ -38,11 +39,10 @@
                             </div>
                         </td>
                     </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>
-
-
         </div>
     </main>
 @stop

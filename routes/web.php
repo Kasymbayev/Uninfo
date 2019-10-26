@@ -2,6 +2,7 @@
 
 //Guest Routes
 
+
 Route::get('/', 'PageController@index')->name('index');
 
 Route::get('/admin', function (){
@@ -33,20 +34,33 @@ Route::group(['middleware' => 'admin'],function () {
     //GET Requests
 
     Route::get('/admin','Admin\AdminController@index')->name('admin');
-    Route::get('/admin/universities','Admin\AdminController@universities')->name('admin_universities');
-    Route::get('/admin/categories','Admin\AdminController@categories')->name('admin_categories');
+
+    //Universities
+
+    Route::get('/admin/universities','UniversityController@Universities')->name('admin_universities');
+    Route::get('/admin/add/university','UniversityController@addUniversity')->name('admin_add_university');
+
+    //Qualifications
+
     Route::get('/admin/qualification','Admin\AdminController@qualification')->name('admin_qualification');
-    Route::get('/admin/specialty','Admin\AdminController@specialty')->name('admin_specialty');
-    Route::get('/admin/uni_type','Admin\AdminController@type')->name('admin_type');
-
-    //POST Requests
-
-    Route::get('/admin/add/university','Admin\AdminController@add_university')->name('admin_add_university');
-    Route::get('/admin/add/specialty','Admin\AdminController@add_specialty')->name('admin_add_specialty');
     Route::get('/admin/add/qualification','Admin\AdminController@add_qualification')->name('admin_add_qualification');
-    Route::get('/admin/add/category','Admin\AdminController@add_category')->name('admin_add_category');
-    Route::get('/admin/add/type','Admin\AdminController@add_type')->name('admin_add_type');
 
+    //Specialties
+
+    Route::get('/admin/specialty','Admin\AdminController@specialty')->name('admin_specialty');
+    Route::get('/admin/add/specialty','Admin\AdminController@add_specialty')->name('admin_add_specialty');
+
+    //Types
+
+    Route::get('/admin/uni_type','UniversityTypeController@Type')->name('admin_type');
+    Route::get('/admin/add/type','UniversityTypeController@addTypes')->name('admin_add_type');
+    Route::post('/admin/add/type','UniversityTypeController@addRequestType');
+
+    //Categories
+
+    Route::get('/admin/categories','UniversityCategoriesController@Categories')->name('admin_categories');
+    Route::get('/admin/add/category','UniversityCategoriesController@addCategories')->name('admin_add_category');
+    Route::post('/admin/add/category','UniversityCategoriesController@addRequestCategories');
 
 });
 

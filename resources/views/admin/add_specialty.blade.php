@@ -17,34 +17,49 @@
                     <form action="/" method="post">
 
                         <div class="uni_form">
-                            <label for="specialty_name">Название специальности</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="specialty_name">Название специальности</label>
+                                    <input type="text" id="specialty_name" class="form-control" name="specialty_name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="specialty_chiper">Шифр специальности</label>
+                                    <input type="text" id="specialty_chiper" class="form-control" name="specialty_chiper" required>
+                                </div>
+                            </div>
                             <br>
-                            <input type="text" id="specialty_name" class="form-control" name="specialty_name" required>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="university">Выберите университет</label>
+                                    <select name="university" id="university" class="form-control" multiple>
+                                        <option value="">Международный университет информационных технологий</option>
+                                        <option value="">Казахский национальный университет имени Аль-Фараби</option>
+                                    </select>
+                                </div>
+                            </div>
                             <br>
-                            <label for="specialty_chiper">Шифр специальности</label>
-                            <br>
-                            <input type="text" id="specialty_chiper" class="form-control" name="specialty_chiper" required>
-                            <br>
-                            <label for="university">Выберите университет</label>
-                            <br>
-
-                            <select name="university" id="university" class="form-control" multiple>
-                                <option value="">Международный университет информационных технологий</option>
-                                <option value="">Казахский национальный университет имени Аль-Фараби</option>
-                            </select>
-                            <br>
-                            <label for="specialty_nap">Выберите направление специальности</label>
-                            <br>
-                            <select name="specialty_nap" id="specialty_nap" class="form-control">
-                                <option value="">Технические науки и технологии</option>
-                            </select>
-
-                            <br>
-                            <label for="subjects">Выберите профильные предметы</label>
-                            <br>
-                            <select name="subjects" id="subjects" class="form-control">
-                                <option value="">Математика и Физика</option>
-                            </select>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="specialty_nap">Выберите направление специальности</label>
+                                    <br>
+                                    <select name="specialty_nap" id="specialty_nap" class="form-control">
+                                        <option value="">Технические науки и технологии</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="specialty_qualification">Выберите квалификацию специальности</label>
+                                    <select name="specialty_qualification" id="specialty_qualification" class="form-control">
+                                        <option value="">Бакалавр</option>
+                                        <option value="">Магистратура</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="subjects">Выберите профильные предметы</label>
+                                    <select name="subjects" id="subjects" class="form-control">
+                                        <option value="">Математика и Физика</option>
+                                    </select>
+                                </div>
+                            </div>
 
                             <br>
 

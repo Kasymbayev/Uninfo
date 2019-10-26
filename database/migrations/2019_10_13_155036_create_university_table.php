@@ -23,7 +23,10 @@ class CreateUniversityTable extends Migration
             $table->string('address');
             $table->integer('phone_number');
             $table->integer('university_code');
+            $table->integer('average_grade');
+            $table->integer('average_price');
             $table->string('university_type');
+            $table->string('university_category');
             $table->integer('fax_number');
             $table->string('email');
             $table->string('website');

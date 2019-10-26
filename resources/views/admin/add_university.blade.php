@@ -102,7 +102,7 @@
                                     <input type="text"
                                            id="address"
                                            class="form-control"
-                                           name="university_code"
+                                           name="university_address"
                                            required
                                            placeholder="Казахстан, Алматинская область, Алматы, ул Манаса 34А">
                                 </div>
@@ -206,9 +206,9 @@
                                     <label for="category_of_university">Категория университета</label>
                                     <select name="category_of_university" id="category_of_university" class="form-control">
                                         <option value="" hidden>Выберите категорию</option>
-                                        <option value="" >Акционированный</option>
-                                        <option value="">Государственный</option>
-                                        <option value="">Национальный</option>
+                                        @foreach($categories as $category)
+                                            <option value="{{$category->id}}">{{$category->category_name}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

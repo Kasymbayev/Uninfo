@@ -15,8 +15,6 @@ class CreateQualificationTable extends Migration
     {
         Schema::create('qualification', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('university_id');
-            $table->foreign('university_id')->references('id')->on('university');
             $table->string('qualification');
             $table->timestamps();
         });
