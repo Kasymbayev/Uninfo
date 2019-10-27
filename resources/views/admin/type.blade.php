@@ -13,7 +13,7 @@
                     </div>
                     <div class="col-md-3 text-right">
                         <div class="action-button">
-                            <a href="{{route('admin_add_qualification')}}">Добавить тип</a>
+                            <a href="{{route('admin_add_type')}}">Добавить тип</a>
                         </div>
                     </div>
                 </div>
