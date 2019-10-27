@@ -1,5 +1,5 @@
 @extends('admin_index')
-@section('title','Профильные предметы')
+@section('title','Направления специальностей')
 @section('content')
     <main class="main">
         <div class="container-fluid">
@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-md-9">
                         <div class="title">
-                            <h4>Профильные предметы</h4>
+                            <h4>Направления специальностей</h4>
                         </div>
                     </div>
                 </div>
@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="action-button">
-                            <a href="{{route('admin_add_subject')}}">Добавить профильный предмет</a>
+                            <a href="{{route('admin_add_direct')}}">Добавить направления</a>
                         </div>
                     </div>
                 </div>
@@ -30,11 +30,11 @@
                     </tr>
                     </thead>
                     <tbody>
-                        @foreach($subjects as $subject)
+
                             <tr>
-                                <th scope="row">{{$subject->id}}</th>
+                                <th scope="row">1</th>
                                 <td>
-                                    {{$subject->subject}}
+                                    1
                                 </td>
                                 <td>
                                     <div class="uni_action text-right">
@@ -43,7 +43,7 @@
                                     </div>
                                 </td>
                             </tr>
-                        @endforeach
+
                     </tbody>
                 </table>
             </div>

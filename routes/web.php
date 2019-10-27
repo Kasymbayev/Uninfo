@@ -59,6 +59,12 @@ Route::group(['middleware' => 'admin'],function () {
     Route::get('/admin/add/subject','UniversitySubjectController@addSubjects')->name('admin_add_subject');
     Route::post('/admin/add/subject','UniversitySubjectController@addRequestSubjects');
 
+    //Directions
+
+    Route::get('/admin/uni_direction','SpecialtyDirectionController@Directions')->name('admin_direct');
+    Route::get('/admin/add/direction','SpecialtyDirectionController@AddDirections')->name('admin_add_direct');
+    Route::post('/admin/add/direction','SpecialtyDirectionController@AddRequestDirections');
+
     //Qualifications
 
     Route::get('/admin/qualification','UniversityQualificationController@Qualification')->name('admin_qualification');
@@ -68,8 +74,8 @@ Route::group(['middleware' => 'admin'],function () {
     //Specialties
 
     Route::get('/admin/specialty','UniversitySpecialtyController@Specialty')->name('admin_specialty');
-    Route::get('/admin/add/specialty','Admin\AdminController@AddSpecialty')->name('admin_add_specialty');
-    Route::post('/admin/add/specialty','Admin\AdminController@AddRequestSpecialty');
+    Route::get('/admin/add/specialty','UniversitySpecialtyController@AddSpecialty')->name('admin_add_specialty');
+    Route::post('/admin/add/specialty','UniversitySpecialtyController@AddRequestSpecialty');
 
 
 });

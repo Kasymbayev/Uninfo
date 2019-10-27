@@ -14,8 +14,8 @@
                 </div>
 
                 <div class="form-wrapper">
-                    <form action="/" method="post">
-
+                    <form action="{{route('admin_add_specialty')}}" method="post">
+                        {!! csrf_field() !!}
                         <div class="uni_form">
                             <div class="row">
                                 <div class="col-md-6">
@@ -32,8 +32,9 @@
                                 <div class="col-md-12">
                                     <label for="university">Выберите университет</label>
                                     <select name="university" id="university" class="form-control" multiple>
-                                        <option value="">Международный университет информационных технологий</option>
-                                        <option value="">Казахский национальный университет имени Аль-Фараби</option>
+                                        @foreach($universities as $university)
+                                            <option value="{{$university->title}}">{{$university->title}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -49,14 +50,17 @@
                                 <div class="col-md-4">
                                     <label for="specialty_qualification">Выберите квалификацию специальности</label>
                                     <select name="specialty_qualification" id="specialty_qualification" class="form-control">
-                                        <option value="">Бакалавр</option>
-                                        <option value="">Магистратура</option>
+                                        @foreach($qualifications as $qualification)
+                                            <option value="{{$qualification->qualification}}">{{$qualification->qualification}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="col-md-4">
                                     <label for="subjects">Выберите профильные предметы</label>
                                     <select name="subjects" id="subjects" class="form-control">
-                                        <option value="">Математика и Физика</option>
+                                        @foreach($subjects as $subject)
+                                            <option value="{{$subject->subject}}">{{$subject->subject}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

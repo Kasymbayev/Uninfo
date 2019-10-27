@@ -60,13 +60,16 @@
                 </div>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#university_subject" >
-                        Профильные предметы
+                        Прочее
                     </a>
                 </li>
                 <div class="collapse" id="university_subject">
                     <div class="university_subject">
                         <li class="nav-item"><a class="nav-link" href="{{route('admin_subject')}}">Все Профильные предметы</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('admin_add_subject')}}">Добавить профильные предметы</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="{{route('admin_direct')}}">Все направления</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('admin_add_direct')}}">Добавить направления специальности</a></li>
                     </div>
                 </div>
                 <li class="nav-item">

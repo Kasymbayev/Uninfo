@@ -1,5 +1,5 @@
 @extends('admin_index')
-@section('title','Добавить профильные предметы')
+@section('title','Добавить направления специальностей')
 @section('content')
     <main class="main">
         <div class="container-fluid">
@@ -8,22 +8,22 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="title">
-                            <h4>Добавить профильный предмет</h4>
+                            <h4>Добавить направления специальностей</h4>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-wrapper">
-                    <form action="{{route('admin_add_subject')}}" method="post">
+                    <form action="{{route('admin_add_direct')}}" method="post">
                         {!! csrf_field() !!}
                         <div class="uni_form">
-                            <label for="subject">Название предметов</label>
+                            <label for="direct">Название направления</label>
                             <br>
-                            <input type="text" id="subject" class="form-control" name="subject" required>
+                            <input type="text" id="subject" class="form-control" name="direct" required>
 
                             <br>
 
-                            <button type="submit" class="btn btn-warning" style="color: #fff; font-size: 18px;">Добавить тип</button>
+                            <button type="submit" class="btn btn-warning" style="color: #fff; font-size: 18px;">Добавить направление</button>
 
                         </div>
 
