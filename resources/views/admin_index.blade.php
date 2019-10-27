@@ -59,6 +59,17 @@
                     </div>
                 </div>
                 <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#university_subject" >
+                        Профильные предметы
+                    </a>
+                </li>
+                <div class="collapse" id="university_subject">
+                    <div class="university_subject">
+                        <li class="nav-item"><a class="nav-link" href="{{route('admin_subject')}}">Все Профильные предметы</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('admin_add_subject')}}">Добавить профильные предметы</a></li>
+                    </div>
+                </div>
+                <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#university_qualification" >
                         Квалификации
                     </a>
