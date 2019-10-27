@@ -9,7 +9,9 @@ class SpecialtyDirectionController extends Controller
 {
     public function Directions(){
 
-        return view('admin.direction');
+        $ObjDirection = new SpecialtyDirection();
+        $direction = $ObjDirection->get();
+        return view('admin.direction',['direction' => $direction]);
 
     }
 
