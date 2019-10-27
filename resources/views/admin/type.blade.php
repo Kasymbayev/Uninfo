@@ -11,19 +11,22 @@
                             <h4>Типы ВУЗов</h4>
                         </div>
                     </div>
-                    <div class="col-md-3 text-right">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
                         <div class="action-button">
                             <a href="{{route('admin_add_type')}}">Добавить тип</a>
                         </div>
                     </div>
                 </div>
 
-                <table class="table bg-primary" style="background: white">
+                <table class="table" style="background: white">
                     <thead class="bg-info">
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Тип</th>
-                        <th scope="col">Действие</th>
+                        <th scope="col" class="text-right">Действие</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -34,8 +37,9 @@
                                 {{$type->type_name}}
                             </td>
                             <td>
-                                <div class="uni_action">
-                                    <a href="#">Редактировать</a>  |  <a href="#">Удалить</a>
+                                <div class="uni_action text-right">
+                                    <a href="#" class="action-edit" title="Редактировать"><i class="fas fa-pencil-alt"></i></a>
+                                    <a href="#" class="action-delete" title="Удалить"><i class="fas fa-trash-alt"></i></a>
                                 </div>
                             </td>
                         </tr>

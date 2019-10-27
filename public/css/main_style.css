@@ -8,7 +8,9 @@
 }
 
 .action-button{
-    margin-top: 33px;
+   margin-bottom: 10px;
+   padding: 15px 0;
+    outline: none;
 }
 
 .action-button a{
@@ -26,6 +28,34 @@
     text-decoration: none;
     background: #118dff;
     transition: all 0.5s ease-in-out;
+}
+
+.fa-pencil-alt{
+    font-size: 16px;
+    color: #000;
+}
+
+.uni_action {
+    margin: 10px 0px;
+}
+
+.action-edit{
+    border-radius: 100%;
+    padding:  10px 10px;
+    background: #ffc107;
+    margin-right: 5px;
+}
+
+.fa-trash-alt{
+    font-size: 16px;
+    color: #fff;
+}
+
+.action-delete{
+    border-radius: 100%;
+    padding:  10px 10px;
+    background: #f70006;
+    color: #fff;
 }
 
 .title h4{

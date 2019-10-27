@@ -6,24 +6,26 @@
 
             <div class="section_1">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <div class="title">
                             <h4>Категории</h4>
                         </div>
                     </div>
-                    <div class="col-md-3 text-right">
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
                         <div class="action-button">
                             <a href="{{route('admin_add_category')}}">Добавить категорию</a>
                         </div>
                     </div>
                 </div>
 
-                <table class="table bg-primary" style="background: white">
+                <table class="table" style="background: white">
                     <thead class="bg-info">
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Категория</th>
-                        <th scope="col">Действие</th>
+                        <th scope="col" class="text-right">Действие</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -33,9 +35,10 @@
                         <td>
                             {{$category -> category_name}}
                         </td>
-                        <td>
+                        <td class="text-right">
                             <div class="uni_action">
-                                <a href="#">Редактировать</a>  |  <a href="#">Удалить</a>
+                                <a href="#" class="action-edit" title="Редактировать"><i class="fas fa-pencil-alt"></i></a>
+                                <a href="#" class="action-delete" title="Удалить"><i class="fas fa-trash-alt"></i></a>
                             </div>
                         </td>
                     </tr>

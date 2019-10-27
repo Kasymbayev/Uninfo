@@ -97,6 +97,7 @@
 </footer>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/alertify.min.js"></script>
+<script src="https://kit.fontawesome.com/d0b98400cc.js" crossorigin="anonymous"></script>
 <script src="/js/bootstrap.js"></script>
 @include('inc.messages')
 </body>
