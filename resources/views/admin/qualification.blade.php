@@ -30,18 +30,20 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>
-                            Бакалавриат
-                        </td>
-                        <td>
-                            <div class="uni_action">
-                                <a href="#" class="action-edit" title="Редактировать"><i class="fas fa-pencil-alt"></i></a>
-                                <a href="#" class="action-delete" title="Удалить"><i class="fas fa-trash-alt"></i></a>
-                            </div>
-                        </td>
-                    </tr>
+                    @foreach($qualifications as $qualification)
+                        <tr>
+                            <th scope="row">{{$qualification->id}}</th>
+                            <td>
+                                {{$qualification->qualification}}
+                            </td>
+                            <td>
+                                <div class="uni_action">
+                                    <a href="#" class="action-edit" title="Редактировать"><i class="fas fa-pencil-alt"></i></a>
+                                    <a href="#" class="action-delete" title="Удалить"><i class="fas fa-trash-alt"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

@@ -55,8 +55,9 @@ Route::group(['middleware' => 'admin'],function () {
 
     //Qualifications
 
-    Route::get('/admin/qualification','Admin\AdminController@qualification')->name('admin_qualification');
-    Route::get('/admin/add/qualification','Admin\AdminController@add_qualification')->name('admin_add_qualification');
+    Route::get('/admin/qualification','UniversityQualificationController@Qualification')->name('admin_qualification');
+    Route::get('/admin/add/qualification','UniversityQualificationController@AddQualification')->name('admin_add_qualification');
+    Route::post('/admin/add/qualification','UniversityQualificationController@AddRequestQualification');
 
     //Specialties
 
