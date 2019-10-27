@@ -13,7 +13,20 @@ class UniversitySpecialtyController extends Controller
 {
     public function Specialty(){
 
-        return view('admin.specialty');
+        $ObjSpecialty = new UniversitySpecialty();
+        $specialities = $ObjSpecialty->get();
+        $qualifications = UniversitySpecialty::with('qualification')->get();
+        $directions = UniversitySpecialty::with('direction')->get();
+        $subjects = UniversitySpecialty::with('subject')->get();
+        $universities = UniversitySpecialty::with('university')->get();
+        return view('admin.specialty',
+            [
+                'specialities' => $specialities,
+                'qualifications' => $qualifications,
+                'directions' => $directions,
+                'subjects' => $subjects,
+                'universities' => $universities,
+            ]);
 
     }
 
@@ -41,15 +54,16 @@ class UniversitySpecialtyController extends Controller
 
         $specialty = new UniversitySpecialty();
         $specialty -> specialty_name = Request::input('specialty_name');
-        $specialty -> specialty_chiper = Request::input('specialty_chiper');
-        $specialty -> university_id = Request::input('university');
-        $specialty -> direction_id = Request::input('specialty_nap');
+        $specialty -> specialty_cipher = Request::input('specialty_chiper');
+        $specialty -> university_id = Request::input('university_id');
+
+        $specialty -> direction_id = Request::input('specialty_direction');
         $specialty -> qualification_id = Request::input('specialty_qualification');
         $specialty -> subject_id = Request::input('subjects');
 
         $saveFlag = $specialty->save();
         if($saveFlag){
-            return redirect(route('admin_type'))->with('success', 'Тип успешно добавлен');
+            return redirect(route('admin_specialty'))->with('success', 'Специальность успешно добавлена');
         }
 
     }

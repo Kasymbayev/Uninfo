@@ -24,4 +24,22 @@ class UniversitySpecialty extends Model
         'updated_at'
     ];
 
+
+    public function subject(){
+        return $this->belongsTo(UniversitySubject::class);
+    }
+
+    public function university(){
+        return $this->belongsTo(Universities::class,'university_id');
+    }
+
+    public function qualification(){
+        return $this->belongsTo(UniversityQualification::class);
+    }
+
+    public function direction(){
+        return $this->belongsTo(SpecialtyDirection::class);
+    }
+
+
 }

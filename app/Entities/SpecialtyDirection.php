@@ -12,6 +12,5 @@ class SpecialtyDirection extends Model
     protected $fillable =
         [
             'direction',
-
         ];
 }

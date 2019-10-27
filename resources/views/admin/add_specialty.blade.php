@@ -31,7 +31,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <label for="university">Выберите университет</label>
-                                    <select name="university_id" id="university" class="form-control" multiple>
+                                    <select name="university_id" id="university" class="form-control">
                                         @foreach($universities as $university)
                                             <option value="{{$university->id}}">{{$university->title}}</option>
                                         @endforeach

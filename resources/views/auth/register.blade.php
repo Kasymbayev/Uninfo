@@ -33,6 +33,7 @@
             <input type="password" placeholder="Повторите пароль" name="password_confirmation" required> <br>
             <label for="remember">Запомнить меня</label>
             <input type="checkbox" name="remember" id="remember" style="width:auto; position: relative; top:2px;">
+            <br>
             <button type="submit">Зарегистрироваться</button>
         </form>
         <br>

@@ -24,27 +24,31 @@
                 <table class="table" style="background: white">
                     <thead class="bg-info">
                     <tr>
-                        <th scope="col">ID</th>
                         <th scope="col">Шифр</th>
+                        <th scope="col">Университет</th>
                         <th scope="col">Специальность</th>
                         <th scope="col">Квалификация</th>
                         <th scope="col">Направление</th>
-                        <th scope="col">Профильные предметы</th>
+                        <th scope="col" >Проф предметы</th>
                         <th scope="col">Действие</th>
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach($specialities as $specialty)
                     <tr>
-                        <th scope="row">1</th>
                         <td>
-                            5B070300
+                            {{$specialty -> specialty_cipher}}
+                        </td>
+                        <td width="150">
+                            {{$specialty -> university -> title}}
                         </td>
                         <td>
-                            Информационные системы
+                            {{$specialty -> specialty_name}}
                         </td>
-                        <td>Бакалавр</td>
-                        <td>Технические науки и технологии</td>
-                        <td>Математика и Физика</td>
+                        <td>{{$specialty -> qualification -> qualification}}</td>
+
+                        <td width="150">{{$specialty -> direction -> direction}}</td>
+                        <td>{{$specialty -> subject -> subject}}</td>
                         <td>
                             <div class="uni_action">
                                 <a href="#" class="action-edit" title="Редактировать"><i class="fas fa-pencil-alt"></i></a>
@@ -52,6 +56,7 @@
                             </div>
                         </td>
                     </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>
