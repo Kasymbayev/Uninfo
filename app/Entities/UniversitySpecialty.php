@@ -15,17 +15,13 @@ class UniversitySpecialty extends Model
             'specialty_cipher',
             'university_id',
             'qualification_id',
+            'direction_id',
+            'subject_id',
         ];
 
-
-    public function qualification()
-    {
-        return $this->belongsTo('App\Entities\UniversityQualification');
-    }
-
-    public function universities()
-    {
-        return $this->hasMany('App\Entities\Universities');
-    }
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
 
 }

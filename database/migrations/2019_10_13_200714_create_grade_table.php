@@ -19,8 +19,6 @@ class CreateGradeTable extends Migration
             $table->foreign('university_id')->references('id')->on('university');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('specialty_id');
-            $table->foreign('specialty_id')->references('id')->on('specialty');
             $table->integer('grade');
             $table->timestamps();
         });

@@ -31,9 +31,9 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <label for="university">Выберите университет</label>
-                                    <select name="university" id="university" class="form-control" multiple>
+                                    <select name="university_id" id="university" class="form-control" multiple>
                                         @foreach($universities as $university)
-                                            <option value="{{$university->title}}">{{$university->title}}</option>
+                                            <option value="{{$university->id}}">{{$university->title}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -41,17 +41,19 @@
                             <br>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <label for="specialty_nap">Выберите направление специальности</label>
+                                    <label for="specialty_direction">Выберите направление специальности</label>
                                     <br>
-                                    <select name="specialty_nap" id="specialty_nap" class="form-control">
-                                        <option value="">Технические науки и технологии</option>
+                                    <select name="specialty_direction" id="specialty_direction" class="form-control">
+                                        @foreach($direction as $direct)
+                                            <option value="{{$direct->id}}">{{$direct->direction}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="col-md-4">
                                     <label for="specialty_qualification">Выберите квалификацию специальности</label>
                                     <select name="specialty_qualification" id="specialty_qualification" class="form-control">
                                         @foreach($qualifications as $qualification)
-                                            <option value="{{$qualification->qualification}}">{{$qualification->qualification}}</option>
+                                            <option value="{{$qualification->id}}">{{$qualification->qualification}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -59,7 +61,7 @@
                                     <label for="subjects">Выберите профильные предметы</label>
                                     <select name="subjects" id="subjects" class="form-control">
                                         @foreach($subjects as $subject)
-                                            <option value="{{$subject->subject}}">{{$subject->subject}}</option>
+                                            <option value="{{$subject->id}}">{{$subject->subject}}</option>
                                         @endforeach
                                     </select>
                                 </div>

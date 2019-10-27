@@ -30,11 +30,11 @@
                     </tr>
                     </thead>
                     <tbody>
-
+                        @foreach($direction as $direct)
                             <tr>
-                                <th scope="row">1</th>
+                                <th scope="row">{{$direct->id}}</th>
                                 <td>
-                                    1
+                                    {{$direct->direction}}
                                 </td>
                                 <td>
                                     <div class="uni_action text-right">
@@ -43,7 +43,7 @@
                                     </div>
                                 </td>
                             </tr>
-
+                        @endforeach
                     </tbody>
                 </table>
             </div>

@@ -14,7 +14,7 @@ class CreateQualificationTable extends Migration
     public function up()
     {
         Schema::create('qualification', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id')->unsigned();
             $table->string('qualification');
             $table->timestamps();
         });

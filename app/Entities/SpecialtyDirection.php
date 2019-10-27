@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class SpecialtyDirection extends Model
 {
-    protected $table = 'direction';
+    protected $table = 'directions';
     protected $primaryKey = 'id';
 
     protected $fillable =
