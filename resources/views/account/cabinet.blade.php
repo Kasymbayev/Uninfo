@@ -157,4 +157,10 @@
         </div>
     </div>
 
+    <script
+            src="https://code.jquery.com/jquery-2.0.0.min.js"
+            integrity="sha256-1IKHGl6UjLSIT6CXLqmKgavKBXtr0/jJlaGMEkh+dhw="
+            crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+
 @stop
