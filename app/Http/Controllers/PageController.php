@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Entities\Universities;
 use App\Http\Controllers\Controller;
 
 
@@ -16,7 +17,10 @@ class PageController extends Controller
 
     public function index(){
 
-        return view('pages.index');
+        $ObjUniversity = new Universities();
+        $universitites = $ObjUniversity->get();
+
+        return view('pages.index',['universitites' => $universitites]);
 
     }
 

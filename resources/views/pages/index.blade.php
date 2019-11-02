@@ -165,6 +165,7 @@
                     </div>
                     <div class="row">
                         <div class="uni_cards">
+                            @foreach($universitites as $university)
                             <div class="col-md-3 uni_card">
                                 <div class="status_stick_accept">
                                     <div class="status_text">
@@ -172,18 +173,18 @@
                                     </div>
                                 </div>
                                 <div class="uni_picture">
-                                    <img src="images/iitu.jpg" alt="">
+                                    <img src="images/university_img/{{ $university->university_img }}">
                                 </div>
                                 <div class="uni_title">
-                                    <h5>Международный IT университет</h5>
+                                    <h5>{{$university->title}}</h5>
                                 </div>
                                 <div class="average_coin">
                                     <span>Средний балл ЕНТ</span>
-                                    <p>85</p>
+                                    <p>{{$university->average_grade}}</p>
                                 </div>
                                 <div class="price_of_year">
                                     <span>Стоимость обучения в год</span>
-                                    <p>950 000 тг</p>
+                                    <p>{{$university->average_price}} тг</p>
                                 </div>
                                 <div class="uni_rating">
                                     <span>Рейтинг вуза:</span> <label>5148</label> <label class="voices">голосов</label>
@@ -194,213 +195,7 @@
                                     <a href="#"><div class="col-md-4 card_nav card_nav_repeat"></div></a>
                                 </div>
                             </div>
-                            <div class="col-md-3 uni_card">
-                                <div class="status_stick_check">
-                                    <div class="status_text">
-                                        <p>Данные на проверке</p>
-                                    </div>
-                                </div>
-                                <div class="uni_picture">
-                                    <img src="images/kbtu.jpg" alt="">
-                                </div>
-                                <div class="uni_title">
-                                    <h5>Казахстанско-Британский технический университет</h5>
-                                </div>
-                                <div class="average_coin">
-                                    <span>Средний балл ЕНТ</span>
-                                    <p>121</p>
-                                </div>
-                                <div class="price_of_year">
-                                    <span>Стоимость обучения в год</span>
-                                    <p>1 250 000 тг</p>
-                                </div>
-                                <div class="uni_rating">
-                                    <span>Рейтинг вуза:</span> <label>5148</label> <label class="voices">голосов</label>
-                                </div>
-                                <div class="bottom_card_nav">
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_like"></div></a>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_favorit"></div></a>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_repeat"></div></a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 uni_card">
-                                <div class="status_stick_check">
-                                    <div class="status_text">
-                                        <p>Данные на проверке</p>
-                                    </div>
-                                </div>
-                                <div class="uni_picture">
-                                    <img src="images/kaznu.jpg" alt="">
-                                </div>
-                                <div class="uni_title">
-                                    <h5>Казахский Национальный университет</h5>
-                                </div>
-                                <div class="average_coin">
-                                    <span>Средний балл ЕНТ</span>
-                                    <p>65</p>
-                                </div>
-                                <div class="price_of_year">
-                                    <span>Стоимость обучения в год</span>
-                                    <p>600 000 тг</p>
-                                </div>
-                                <div class="uni_rating">
-                                    <span>Рейтинг вуза:</span> <label>5148</label> <label class="voices">голосов</label>
-                                </div>
-                                <div class="bottom_card_nav">
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_like"></div></a>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_favorit"></div></a>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_repeat"></div></a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 uni_card">
-                                <div class="status_stick_check">
-                                    <div class="status_text">
-                                        <p>Данные на проверке</p>
-                                    </div>
-                                </div>
-                                <div class="uni_picture">
-                                    <img src="images/sdu.jpg" alt="">
-                                </div>
-                                <div class="uni_title">
-                                    <h5>Университет Сулейман Демиреля</h5>
-                                </div>
-                                <div class="average_coin">
-                                    <span>Средний балл ЕНТ</span>
-                                    <p>75</p>
-                                </div>
-                                <div class="price_of_year">
-                                    <span>Стоимость обучения в год</span>
-                                    <p>750 000 тг</p>
-                                </div>
-                                <div class="uni_rating">
-                                    <span>Рейтинг вуза:</span> <label>5148</label> <label class="voices">голосов</label>
-                                </div>
-                                <div class="bottom_card_nav">
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_like"></div></a>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_favorit"></div></a>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_repeat"></div></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="uni_cards">
-                            <div class="col-md-3 uni_card">
-                                <div class="status_stick_accept">
-                                    <div class="status_text">
-                                        <p>Принят</p>
-                                    </div>
-                                </div>
-                                <div class="uni_picture">
-                                    <img src="images/iitu.jpg" alt="">
-                                </div>
-                                <div class="uni_title">
-                                    <h5>Международный IT университет</h5>
-                                </div>
-                                <div class="average_coin">
-                                    <span>Средний балл ЕНТ</span>
-                                    <p>85</p>
-                                </div>
-                                <div class="price_of_year">
-                                    <span>Стоимость обучения в год</span>
-                                    <p>950 000 тг</p>
-                                </div>
-                                <div class="uni_rating">
-                                    <span>Рейтинг вуза:</span> <label>5148</label> <label class="voices">голосов</label>
-                                </div>
-                                <div class="bottom_card_nav">
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_like"></div></a>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_favorit"></div></a>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_repeat"></div></a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 uni_card">
-                                <div class="status_stick_check">
-                                    <div class="status_text">
-                                        <p>Данные на проверке</p>
-                                    </div>
-                                </div>
-                                <div class="uni_picture">
-                                    <img src="images/kbtu.jpg" alt="">
-                                </div>
-                                <div class="uni_title">
-                                    <h5>Казахстанско-Британский технический университет</h5>
-                                </div>
-                                <div class="average_coin">
-                                    <span>Средний балл ЕНТ</span>
-                                    <p>121</p>
-                                </div>
-                                <div class="price_of_year">
-                                    <span>Стоимость обучения в год</span>
-                                    <p>1 250 000 тг</p>
-                                </div>
-                                <div class="uni_rating">
-                                    <span>Рейтинг вуза:</span> <label>5148</label> <label class="voices">голосов</label>
-                                </div>
-                                <div class="bottom_card_nav">
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_like"></div></a>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_favorit"></div></a>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_repeat"></div></a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 uni_card">
-                                <div class="status_stick_check">
-                                    <div class="status_text">
-                                        <p>Данные на проверке</p>
-                                    </div>
-                                </div>
-                                <div class="uni_picture">
-                                    <img src="images/kaznu.jpg" alt="">
-                                </div>
-                                <div class="uni_title">
-                                    <h5>Казахский Национальный университет</h5>
-                                </div>
-                                <div class="average_coin">
-                                    <span>Средний балл ЕНТ</span>
-                                    <p>65</p>
-                                </div>
-                                <div class="price_of_year">
-                                    <span>Стоимость обучения в год</span>
-                                    <p>600 000 тг</p>
-                                </div>
-                                <div class="uni_rating">
-                                    <span>Рейтинг вуза:</span> <label>5148</label> <label class="voices">голосов</label>
-                                </div>
-                                <div class="bottom_card_nav">
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_like"></div></a>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_favorit"></div></a>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_repeat"></div></a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 uni_card">
-                                <div class="status_stick_check">
-                                    <div class="status_text">
-                                        <p>Данные на проверке</p>
-                                    </div>
-                                </div>
-                                <div class="uni_picture">
-                                    <img src="images/sdu.jpg" alt="">
-                                </div>
-                                <div class="uni_title">
-                                    <h5>Университет Сулейман Демиреля</h5>
-                                </div>
-                                <div class="average_coin">
-                                    <span>Средний балл ЕНТ</span>
-                                    <p>75</p>
-                                </div>
-                                <div class="price_of_year">
-                                    <span>Стоимость обучения в год</span>
-                                    <p>750 000 тг</p>
-                                </div>
-                                <div class="uni_rating">
-                                    <span>Рейтинг вуза:</span> <label>5148</label> <label class="voices">голосов</label>
-                                </div>
-                                <div class="bottom_card_nav">
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_like"></div></a>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_favorit"></div></a>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_repeat"></div></a>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

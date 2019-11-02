@@ -37,7 +37,7 @@ class UniversityController extends Controller
             $filename = pathinfo($filenameWithExit, PATHINFO_FILENAME);
             $extension = request()->file('university_img')->getClientOriginalExtension();
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
-            request()->file('university_img')->storeAs('public/images',$fileNameToStore);
+            request()->file('university_img')->storeAs('public/images/university_img',$fileNameToStore);
         }
 
         $university -> university_img = $fileNameToStore;
