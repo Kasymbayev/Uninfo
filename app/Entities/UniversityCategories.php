@@ -17,4 +17,5 @@ class UniversityCategories extends Model
         'created_at',
         'updated_at'
     ];
+
 }

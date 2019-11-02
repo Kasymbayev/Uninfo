@@ -53,24 +53,23 @@
                         <th scope="col">ID</th>
                         <th scope="col">Шифр</th>
                         <th scope="col">Специальность</th>
-                        <th scope="col">Описание</th>
                         <th scope="col">Университеты</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>
-                            5B070300
-                        </td>
-                        <td>
-                            Информационные системы
-                        </td>
-                        <td>
-                            Специальность «Информационные системы» – область науки и техники, которая включает совокупность средств, способов и методов человеческой деятельности, направленных на создание и применение систем сбора, представления, хранения, передачи и обработки информации.
-                        </td>
-                        <td>Международный университет информационных технологий</td>
-                    </tr>
+                    @foreach($specialities as $specialty)
+                        <tr>
+                            <th scope="row">{{$specialty -> id}}</th>
+                            <td>
+                                {{$specialty-> specialty_cipher}}
+                            </td>
+                            <td>
+                                {{$specialty-> specialty_name}}
+                            </td>
+
+                            <td>{{$specialty-> university-> title}}</td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>
@@ -85,19 +84,17 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Категория</th>
-                        <th scope="col">Университет</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>
-                            Технический
-                        </td>
-                        <td>
-                            Международный университет информационных технологий
-                        </td>
-                    </tr>
+                    @foreach($categories as $category)
+                        <tr>
+                            <th scope="row">{{$category->id}}</th>
+                            <td>
+                                {{$category->category_name}}
+                            </td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

@@ -41,5 +41,4 @@ class UniversitySpecialty extends Model
         return $this->belongsTo(SpecialtyDirection::class);
     }
 
-
 }
