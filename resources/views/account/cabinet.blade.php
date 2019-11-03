@@ -39,7 +39,7 @@
                         <div class="tab-pane active" id="lA">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h3>Избранное</h3>
+                                    <h3 style="margin-top: -30px;">Избранное</h3>
                                     <br>
                                     @if(!$favorites->isEmpty())
                                     <table class="table">
@@ -47,7 +47,6 @@
                                         <tr>
                                             <th>Названия ВУЗА</th>
                                             <th>Действие</th>
-                                            <th>Подача</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -55,43 +54,88 @@
                                                 <tr>
                                                     <td><a href="#">{{$favorite->university->title}}</a></td>
                                                     <td><a href="#">Удалить</a></td>
-                                                    <td><a href="#">Подать документы</a></td>
                                                 </tr>
                                                 @endforeach
                                         </tbody>
                                     </table>
                                     @else
-                                        У вас нет избранных <small style="color: #8c8c8c;">(Чтобы добавить нажмите звездочку)</small>
+                                        <div class="no_compare">
+                                            <h3>
+                                                Упс!<br><span>Нет избранных</span>
+                                            </h3>
+                                        </div>
                                     @endif
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane" id="lB">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h3>Сравнения</h3>
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th>Названия ВУЗА</th>
-                                            <th>Проходной балл</th>
-                                            <th>Бюджетных мест</th>
-                                            <th>Стоимость обучения</th>
-                                            <th>Действия</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td><a href="#">Международный IT Университет</a></td>
-                                            <td>105</td>
-                                            <td>305</td>
-                                            <td>750 000 тг/год</td>
-                                            <td><a href="#">Удалить</a></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                            <h3 style="margin-top: -30px;">Сравнения</h3>
+                                    <div class="compare_style">
+                                        @if(!$compare->isEmpty())
+                                            <div class="compare_cards">
+                                                @foreach($compare as $compare)
+                                                    <a href="{{route('uni.show',
+                                                        [
+
+                                                        'id'   => $compare->university->id,
+                                                        'slug' => str_slug($compare->university->title)
+                                                        ]
+                                                    )}}">
+                                                    <div class="col-md-3 compare_card">
+                                                        <div class="uni_picture_compare">
+                                                            <img src="{{ asset('public/images/university_img/'.$compare->university->university_img) }}">
+                                                        </div>
+                                                        <div class="compare_title">
+                                                            <h5>{{$compare->university->title}}</h5>
+                                                        </div>
+                                                        <div class="compare_nav">
+                                                            <p>Аббревиатура: <span class="answer"><small>{{$compare->university->abbreviation}}</small></span> </p>
+                                                        </div>
+                                                        <div class="compare_nav">
+                                                            <p>Ректор: <span class="answer"><small>{{$compare->university->rector}}</small></span></p>
+                                                        </div>
+                                                        <div class="compare_nav">
+                                                            <p>Военная кафедра: <span class="answer"><small>{{$compare->university->military_dep}}</small></span></p>
+                                                        </div>
+                                                        <div class="compare_nav">
+                                                            <p>Средний балл поступления: <span class="answer"><small>{{$compare->university->average_grade}}</small></span></p>
+                                                        </div>
+                                                        <div class="compare_nav">
+                                                            <p>Средняя стоимость обучения: <span class="answer"><small>{{$compare->university->average_price}}</small> тг/в год</span></p>
+                                                        </div>
+                                                        <div class="compare_nav">
+                                                            <p>Код университета: <span class="answer"><small>{{$compare->university->university_code}}</small></span></p>
+                                                        </div>
+                                                        <div class="compare_nav">
+                                                            <p>Адрес: <span class="answer"><small>{{$compare->university->address}}</small></span></p>
+                                                        </div>
+                                                        <div class="compare_nav">
+                                                            <p>Приемная коммисия: <span class="answer"><small>{{$compare->university->phone_number}}</small></span></p>
+                                                        </div>
+                                                        <div class="compare_nav">
+                                                            <p>Факс: <span class="answer"><small>{{$compare->university->fax_number}}</small></span></p>
+                                                        </div>
+                                                        <div class="compare_nav">
+                                                            <p>Почта: <span class="answer"><small>{{$compare->university->email}}</small></span></p>
+                                                        </div>
+                                                        <div class="compare_nav">
+                                                            <p>Сайт: <span class="answer"><small>{{$compare->university->website}}</small></span></p>
+                                                        </div>
+                                                        <div class="delete_btn">
+                                                            <a href="#">Убрать</a>
+                                                        </div>
+                                                    </div>
+                                                    </a>
+                                                @endforeach
+                                            </div>
+                                            @else
+                                            <div class="no_compare">
+                                                <h3>
+                                                    Упс!<br><span>У вас нет сравнений</span>
+                                                </h3>
+                                            </div>
+                                        @endif
+                                    </div>
                         </div>
                         <div class="tab-pane" id="lC">
                             <div class="row">

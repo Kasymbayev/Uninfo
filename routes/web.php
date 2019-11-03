@@ -33,6 +33,11 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/user/add/favorite', 'UserFavoriteController@addFavorite')->name('add.favorite');
     Route::post('/user/add/favorite', 'UserFavoriteController@addRequestFavorite');
 
+    //Comparison
+
+    Route::get('/user/add/compare', 'UserComparisonController@addCompare')->name('add.compare');
+    Route::post('/user/add/compare', 'UserComparisonController@addRequestCompare');
+
 });
 
 //Admin Routes

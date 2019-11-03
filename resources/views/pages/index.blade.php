@@ -206,7 +206,12 @@
                                         <input type="hidden" name="user_id" value="{{\Illuminate\Support\Facades\Auth::user()->id}}">
                                         <button type="submit"><div class="card_nav_favorit"></div></button>
                                     </form>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_repeat"></div></a>
+                                    <form action="{{route('add.compare')}}" method="post">
+                                        {!! csrf_field() !!}
+                                        <input type="hidden" name="university_id" value="{{$university->id}}">
+                                        <input type="hidden" name="user_id" value="{{\Illuminate\Support\Facades\Auth::user()->id}}">
+                                        <button type="submit"><div class="card_nav card_nav_repeat"></div></button>
+                                    </form>
                                 </div>
                             </div>
                             @endforeach

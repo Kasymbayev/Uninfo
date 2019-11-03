@@ -9,9 +9,9 @@
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <title>UNINFO - Сервис поиска вуза</title>
     <link href="/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/responsive.css">
     <link rel="stylesheet" href="/css/alertify.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
@@ -120,8 +120,6 @@
 @include('inc.messages')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="/js/bootstrap.min.js"></script>
-</body>
-
 <div id="footer">
     <div class="container">
         <div class="row">
@@ -162,4 +160,5 @@
         </div>
     </div>
 </div>
+</body>
 </html>
