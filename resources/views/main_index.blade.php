@@ -8,10 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <title>UNINFO - Сервис поиска вуза</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/alertify.css">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/alertify.css">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-md-5 logo">
                     <div class="logo_img">
-                        <a href="{{route('index')}}"><img src="images/logo.png" alt=""></a>
+                        <a href="{{route('index')}}"><img src="/images/logo.png" alt=""></a>
                     </div>
                     <div class="descr_logo">
                         <span>Интересные вузы <br>Казахстана</span><br>
@@ -30,15 +30,15 @@
                 </div>
                 <div class="col-md-3 information">
                     <div class="phone">
-                        <img src="images/icons/phone.png" alt="">
+                        <img src="/images/icons/phone.png" alt="">
                         <span>8(707)-711-07-98</span>
                     </div>
                     <div class="mail">
-                        <img src="images/icons/mail.png" alt="">
+                        <img src="/images/icons/mail.png" alt="">
                         <span>info@uninfo.kz</span>
                     </div>
                     <div class="location">
-                        <img src="images/icons/location.png" alt="">
+                        <img src="/images/icons/location.png" alt="">
                         <span>Алматы, Манаса 34А</span>
                     </div>
                 </div>
@@ -121,4 +121,45 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="/js/bootstrap.min.js"></script>
 </body>
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer_objects">
+                <div class="col-md-3 logo">
+                    <div class="logo_img">
+                        <img src="/images/logo.png" alt="">
+                    </div>
+                    <div class="descr_logo">
+                        <span>Интересные вузы <br>Казахстана</span><br>
+                        <label>Вперед на поиски</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6 information">
+                    <div class="phone">
+                        <img src="/images/icons/phone.png" alt="">
+                        <span>8(707)-711-07-98</span>
+                    </div>
+                    <div class="mail">
+                        <img src="/images/icons/mail.png" alt="">
+                        <span>info@uninfo.kz</span>
+                    </div>
+                    <div class="location">
+                        <img src="/images/icons/location.png" alt="">
+                        <span>Алматы, Манаса 34А</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-0">
+                    <h6>UNINFO ©2019</h6>
+                </div>
+                <div class="col-md-2 social_icons">
+                    <ul>
+                        <li><a href="#"><img src="images/icons/vk.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="images/icons/inst.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </html>

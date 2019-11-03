@@ -165,33 +165,47 @@
                     </div>
                     <div class="row">
                         <div class="uni_cards">
-                            @foreach($universitites as $university)
+                            @foreach($universities as $university)
                             <div class="col-md-3 uni_card">
                                 <div class="status_stick_accept">
                                     <div class="status_text">
                                         <p>Принят</p>
                                     </div>
                                 </div>
-                                <div class="uni_picture">
-                                    <img src="images/university_img/{{ $university->university_img }}">
-                                </div>
-                                <div class="uni_title">
-                                    <h5>{{$university->title}}</h5>
-                                </div>
-                                <div class="average_coin">
-                                    <span>Средний балл ЕНТ</span>
-                                    <p>{{$university->average_grade}}</p>
-                                </div>
-                                <div class="price_of_year">
-                                    <span>Стоимость обучения в год</span>
-                                    <p>{{$university->average_price}} тг</p>
-                                </div>
-                                <div class="uni_rating">
-                                    <span>Рейтинг вуза:</span> <label>5148</label> <label class="voices">голосов</label>
-                                </div>
-                                <div class="bottom_card_nav">
+                                <a href="{{route('uni.show',
+
+                                [
+                                    'id' => $university->id,
+                                    'slug' => str_slug($university->title)
+                                ]
+
+                                )}}">
+                                    <div class="uni_picture">
+                                        <img src="{{ asset('public/images/university_img/'.$university->university_img) }}">
+                                    </div>
+                                    <div class="uni_title">
+                                        <h5>{{$university->title}}</h5>
+                                    </div>
+                                    <div class="average_coin">
+                                        <span>Средний балл ЕНТ</span>
+                                        <p>{{$university->average_grade}}</p>
+                                    </div>
+                                    <div class="price_of_year">
+                                        <span>Стоимость обучения в год</span>
+                                        <p>{{$university->average_price}} тг</p>
+                                    </div>
+                                    <div class="uni_rating">
+                                        <span>Рейтинг вуза:</span> <label>5148</label> <label class="voices">голосов</label>
+                                    </div>
+                                </a>
+                                <div class="bottom_card_nav university_buttons">
                                     <a href="#"><div class="col-md-4 card_nav card_nav_like"></div></a>
-                                    <a href="#"><div class="col-md-4 card_nav card_nav_favorit"></div></a>
+                                    <form action="{{route('add.favorite')}}" method="post">
+                                        {!! csrf_field() !!}
+                                        <input type="hidden" name="university_id" value="{{$university->id}}">
+                                        <input type="hidden" name="user_id" value="{{\Illuminate\Support\Facades\Auth::user()->id}}">
+                                        <button type="submit"><div class="card_nav_favorit"></div></button>
+                                    </form>
                                     <a href="#"><div class="col-md-4 card_nav card_nav_repeat"></div></a>
                                 </div>
                             </div>
@@ -200,46 +214,7 @@
                     </div>
                 </div>
             </div>
-            <div id="footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="footer_objects">
-                            <div class="col-md-3 logo">
-                                <div class="logo_img">
-                                    <img src="images/logo.png" alt="">
-                                </div>
-                                <div class="descr_logo">
-                                    <span>Интересные вузы <br>Казахстана</span><br>
-                                    <label>Вперед на поиски</label>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-xs-6 information">
-                                <div class="phone">
-                                    <img src="images/icons/phone.png" alt="">
-                                    <span>8(707)-711-07-98</span>
-                                </div>
-                                <div class="mail">
-                                    <img src="images/icons/mail.png" alt="">
-                                    <span>info@uninfo.kz</span>
-                                </div>
-                                <div class="location">
-                                    <img src="images/icons/location.png" alt="">
-                                    <span>Алматы, Манаса 34А</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-xs-0">
-                                <h6>UNINFO ©2019</h6>
-                            </div>
-                            <div class="col-md-2 social_icons">
-                                <ul>
-                                    <li><a href="#"><img src="images/icons/vk.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="images/icons/inst.jpg" alt=""></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 

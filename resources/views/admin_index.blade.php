@@ -101,7 +101,6 @@
 
     @yield('content')
 
-
 </div>
 <footer class="app-footer">
     <div>

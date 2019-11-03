@@ -5,6 +5,7 @@
 
 Route::get('/', 'PageController@index')->name('index');
 
+
 Route::get('/admin', function (){
     return view('auth.login');
 });
@@ -24,6 +25,13 @@ Route::group(['middleware' => 'auth'], function (){
         \Auth::logout();
         return redirect(route('login'));
     })->name('logout');
+
+    Route::get('/university/{id}/{slug}', 'PageController@ShowUniversity')->name('uni.show');
+
+    //Favorites
+
+    Route::get('/user/add/favorite', 'UserFavoriteController@addFavorite')->name('add.favorite');
+    Route::post('/user/add/favorite', 'UserFavoriteController@addRequestFavorite');
 
 });
 

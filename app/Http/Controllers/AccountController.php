@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Entities\UserFavorite;
+use Illuminate\Support\Facades\Auth;
 
 
 class AccountController extends  Controller
@@ -10,7 +11,10 @@ class AccountController extends  Controller
 
     public function index()
     {
-        return view('account.cabinet');
+        $ObjFavorite = new UserFavorite();
+        $universities = UserFavorite::with('university')->get();
+        $favorites = $ObjFavorite::where('user_id', '=', Auth::user()->id)->get();
+        return view('account.cabinet',['favorites' => $favorites,'universities' => $universities]);
     }
 
 }

@@ -27,7 +27,6 @@ class AdminController extends Controller
         $universities = $ObjUniversitites->get();
         return view('admin.index',
             [
-
             'universities' => $universities,
             'specialities' => $specialities,
             'categories' => $categories,

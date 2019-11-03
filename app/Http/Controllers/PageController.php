@@ -9,8 +9,8 @@
 namespace App\Http\Controllers;
 
 use App\Entities\Universities;
+use App\Entities\UniversityType;
 use App\Http\Controllers\Controller;
-
 
 class PageController extends Controller
 {
@@ -18,9 +18,22 @@ class PageController extends Controller
     public function index(){
 
         $ObjUniversity = new Universities();
-        $universitites = $ObjUniversity->get();
+        $universities = $ObjUniversity->get();
 
-        return view('pages.index',['universitites' => $universitites]);
+        return view('pages.index',['universities' => $universities]);
+
+    }
+
+    public function ShowUniversity(int $id){
+
+        $infUniversity = Universities::find($id);
+
+
+        if(!$infUniversity){
+            return abort(404);
+        }
+
+        return view('pages.show_university',['universities' => $infUniversity]);
 
     }
 

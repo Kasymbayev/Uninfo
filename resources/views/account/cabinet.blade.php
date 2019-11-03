@@ -41,6 +41,7 @@
                                 <div class="col-md-12">
                                     <h3>Избранное</h3>
                                     <br>
+                                    @if(!$favorites->isEmpty())
                                     <table class="table">
                                         <thead>
                                         <tr>
@@ -50,13 +51,18 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td><a href="#">Международный IT Университет</a></td>
-                                            <td><a href="#">Удалить</a></td>
-                                            <td><a href="#">Подать документы</a></td>
-                                        </tr>
+                                                @foreach($favorites as $favorite)
+                                                <tr>
+                                                    <td><a href="#">{{$favorite->university->title}}</a></td>
+                                                    <td><a href="#">Удалить</a></td>
+                                                    <td><a href="#">Подать документы</a></td>
+                                                </tr>
+                                                @endforeach
                                         </tbody>
                                     </table>
+                                    @else
+                                        У вас нет избранных <small style="color: #8c8c8c;">(Чтобы добавить нажмите звездочку)</small>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -115,52 +121,13 @@
                 </div>
             </div>
         </div>
-        <div id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="footer_objects">
-                        <div class="col-md-3 logo">
-                            <div class="logo_img">
-                                <img src="images/logo.png" alt="">
-                            </div>
-                            <div class="descr_logo">
-                                <span>Интересные вузы <br>Казахстана</span><br>
-                                <label>Вперед на поиски</label>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-xs-6 information">
-                            <div class="phone">
-                                <img src="images/icons/phone.png" alt="">
-                                <span>8(707)-711-07-98</span>
-                            </div>
-                            <div class="mail">
-                                <img src="images/icons/mail.png" alt="">
-                                <span>info@uninfo.kz</span>
-                            </div>
-                            <div class="location">
-                                <img src="images/icons/location.png" alt="">
-                                <span>Алматы, Манаса 34А</span>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-xs-0">
-                            <h6>UNINFO ©2019</h6>
-                        </div>
-                        <div class="col-md-2 social_icons">
-                            <ul>
-                                <li><a href="#"><img src="images/icons/vk.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/icons/inst.jpg" alt=""></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <script
             src="https://code.jquery.com/jquery-2.0.0.min.js"
             integrity="sha256-1IKHGl6UjLSIT6CXLqmKgavKBXtr0/jJlaGMEkh+dhw="
             crossorigin="anonymous"></script>
+    <script src="/js/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.js"></script>
 
 @stop

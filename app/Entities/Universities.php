@@ -33,4 +33,5 @@ class Universities extends Model
         'updated_at'
     ];
 
+
 }
