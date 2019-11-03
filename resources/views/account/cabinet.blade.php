@@ -61,7 +61,11 @@
                                     @else
                                         <div class="no_compare">
                                             <h3>
-                                                Упс!<br><span>Нет избранных</span>
+                                                Упс!<br>
+                                                <span>
+                                                    Нет избранных,<br>
+                                                        <a href="{{route('index')}}">Добавить</a>
+                                                </span>
                                             </h3>
                                         </div>
                                     @endif
@@ -70,6 +74,9 @@
                         </div>
                         <div class="tab-pane" id="lB">
                             <h3 style="margin-top: -30px;">Сравнения</h3>
+                            <div class="uni_inform">
+                                Чтобы открыть страницу университета, нажмите на его изображение
+                            </div>
                                     <div class="compare_style">
                                         @if(!$compare->isEmpty())
                                             <div class="compare_cards">
@@ -87,6 +94,9 @@
                                                         </div>
                                                         <div class="compare_title">
                                                             <h5>{{$compare->university->title}}</h5>
+                                                            <div class="delete_btn">
+                                                                <a href="#">Убрать</a>
+                                                            </div>
                                                         </div>
                                                         <div class="compare_nav">
                                                             <p>Аббревиатура: <span class="answer"><small>{{$compare->university->abbreviation}}</small></span> </p>
@@ -121,9 +131,6 @@
                                                         <div class="compare_nav">
                                                             <p>Сайт: <span class="answer"><small>{{$compare->university->website}}</small></span></p>
                                                         </div>
-                                                        <div class="delete_btn">
-                                                            <a href="#">Убрать</a>
-                                                        </div>
                                                     </div>
                                                     </a>
                                                 @endforeach
@@ -131,7 +138,11 @@
                                             @else
                                             <div class="no_compare">
                                                 <h3>
-                                                    Упс!<br><span>У вас нет сравнений</span>
+                                                    Упс!<br>
+                                                    <span>
+                                                        Нет сравнений,<br>
+                                                        <a href="{{route('index')}}">Добавить</a>
+                                                    </span>
                                                 </h3>
                                             </div>
                                         @endif

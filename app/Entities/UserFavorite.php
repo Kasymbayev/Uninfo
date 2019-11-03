@@ -3,6 +3,7 @@
 namespace App\Entities;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Validator;
 
 class UserFavorite extends Model
 {
@@ -19,5 +20,6 @@ class UserFavorite extends Model
     public function university(){
         return $this->belongsTo(Universities::class,'university_id');
     }
+
 
 }

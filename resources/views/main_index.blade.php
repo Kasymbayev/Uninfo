@@ -9,9 +9,9 @@
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <title>UNINFO - Сервис поиска вуза</title>
     <link href="/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/responsive.css">
     <link rel="stylesheet" href="/css/alertify.css">
-    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
@@ -84,7 +84,7 @@
                             <li><a href="">Вузы</a></li>
                             <li><a href="">Колледжи</a></li>
                             <li><a href="">Курсы</a></li>
-                            <li><a href="">Специальности</a></li>
+                            <li><a href="{{route('specialty')}}">Специальности</a></li>
                             <li><a href="">Профессии</a></li>
                             <li><a href="">O нас</a></li>
                             <li><a href="">Обратная связь</a></li>

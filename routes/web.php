@@ -38,6 +38,10 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/user/add/compare', 'UserComparisonController@addCompare')->name('add.compare');
     Route::post('/user/add/compare', 'UserComparisonController@addRequestCompare');
 
+    //Specialty
+
+    Route::get('/specialty', 'UserSpecialtyController@index' )->name('specialty');
+
 });
 
 //Admin Routes
