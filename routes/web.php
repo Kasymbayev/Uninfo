@@ -46,7 +46,7 @@ Route::group(['middleware' => 'auth'], function (){
 
 //Admin Routes
 
-Route::group(['middleware' => 'admin'],function () {
+Route::group(['middleware' => 'ad min'],function () {
 
     //GET Requests
 
