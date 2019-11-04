@@ -9,7 +9,7 @@
 namespace App\Http\Controllers;
 
 use App\Entities\Universities;
-use App\Entities\UniversityType;
+
 use App\Http\Controllers\Controller;
 
 class PageController extends Controller
@@ -19,7 +19,6 @@ class PageController extends Controller
 
         $ObjUniversity = new Universities();
         $universities = $ObjUniversity->get();
-
         return view('pages.index',['universities' => $universities]);
 
     }

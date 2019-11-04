@@ -3,6 +3,9 @@
 //Guest Routes
 
 
+use App\Entities\UniversitySpecialty;
+use Illuminate\Support\Facades\Request;
+
 Route::get('/', 'PageController@index')->name('index');
 
 
@@ -39,14 +42,20 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/user/add/compare', 'UserComparisonController@addRequestCompare');
 
     //Specialty
+    Route::get('/specialty', 'UserSpecialtyController@userSpecialty' )->name('specialty');
 
-    Route::get('/specialty', 'UserSpecialtyController@index' )->name('specialty');
+    //SpecialtySort
+    Route::get('specialty/bachelor','SpecialtySortController@bachelor')->name('bachelor');
+    Route::get('specialty/magistr','SpecialtySortController@magistr')->name('magistr');
+
+    //Search
+    Route::post('/search', 'SearchController@search')->name('search'); // можно get
 
 });
 
 //Admin Routes
 
-Route::group(['middleware' => 'ad min'],function () {
+Route::group(['middleware' => 'admin'],function () {
 
     //GET Requests
 

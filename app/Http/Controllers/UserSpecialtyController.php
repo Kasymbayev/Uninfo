@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class UserSpecialtyController extends Controller
 {
-    public function index(){
+    public function userSpecialty(){
 
         $ObjSpecialty = new UniversitySpecialty();
         $specialities = $ObjSpecialty->get();

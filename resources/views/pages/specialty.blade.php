@@ -16,8 +16,8 @@
                     <div class="filter">
                         <ul>
                             <li>
-                                <a href="#">Бакалавриат</a>
-                                <a href="#">Магистратура</a>
+                                <a href="{{route('bachelor')}}">Бакалавриат</a>
+                                <a href="{{route('magistr')}}">Магистратура</a>
                                 <a href="#">Докторантура PhD</a>
                                 <a href="#">Резидентура</a>
                                 <a href="#">По профильным предметам</a>

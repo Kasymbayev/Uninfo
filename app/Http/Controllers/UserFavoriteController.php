@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Entities\Universities;
-use App\Entities\User;
 use App\Entities\UserFavorite;
 use Illuminate\Support\Facades\Request;
 
@@ -11,6 +9,7 @@ class UserFavoriteController extends Controller
 {
 
     public function addFavorite(){
+
         return view('pages.index');
     }
 

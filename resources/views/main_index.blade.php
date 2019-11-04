@@ -152,8 +152,8 @@
                 </div>
                 <div class="col-md-2 social_icons">
                     <ul>
-                        <li><a href="#"><img src="images/icons/vk.jpg" alt=""></a></li>
-                        <li><a href="#"><img src="images/icons/inst.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="/images/icons/vk.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="/images/icons/inst.jpg" alt=""></a></li>
                     </ul>
                 </div>
             </div>
