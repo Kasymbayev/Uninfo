@@ -18,7 +18,7 @@
                                 {!! csrf_field() !!}
                                 <div class="search_section_inputs">
                                     <div class="col-md-6 col-xs-12 inputs border_l">
-                                        <input type="text" placeholder="Ваш предмет" name="subject" required>
+                                        <input type="text" placeholder="Введите название или шифр специальности" name="subject" required>
                                     </div>
                                     <div class="col-md-6 col-xs-12 inputs border_r">
                                         <input type="submit" value="Вперед">
@@ -46,7 +46,7 @@
                             <div class="uni_cards">
                                 @foreach($universities as $university)
                                     <div class="col-md-3 uni_card">
-                                        <div class="status_stick_check">
+                                        <div class="status_stick_accept">
                                             <div class="status_text">
                                                 <p>На проверке</p>
                                             </div>
