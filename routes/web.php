@@ -80,6 +80,11 @@ Route::group(['middleware' => 'admin'],function () {
 
     Route::get('/admin/universities/{id}', 'UniversityController@delete');
 
+    //University Verification
+
+    Route::get('/admin/universities/status/verify/{id}', 'UniversityController@statusVerify')->name('status.verify');
+    Route::get('/admin/universities/status/unverify/{id}', 'UniversityController@statusUnVerify')->name('status.unverify');
+
     //Categories
 
     Route::get('/admin/categories','UniversityCategoriesController@Categories')->name('admin_categories');

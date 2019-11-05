@@ -4,6 +4,14 @@ namespace App\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property array|null|string subject_id
+ * @property array|null|string qualification_id
+ * @property array|null|string direction_id
+ * @property array|null|string university_id
+ * @property array|null|string specialty_cipher
+ * @property array|null|string specialty_name
+ */
 class UniversitySpecialty extends Model
 {
     protected $table = 'specialty';

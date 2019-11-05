@@ -29,8 +29,8 @@
                         <th scope="col">Категория</th>
                         <th scope="col">Адрес</th>
                         <th scope="col">Телефон</th>
-                        <th scope="col">Код</th>
                         <th scope="col">Действие</th>
+                        <th scope="col">Статус</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -39,15 +39,25 @@
                             <th scope="row">{{$university->id}}</th>
                             <td width="350">
                                 {{$university->title}}
+                                @if($university->status == 1)
+                                <span style="color: #079400; font-size: 18px;"><small>(Верифицирован)</small></span>
+                                @else
+                                <span style="color: #ff4700;; font-size: 18px;"><small>(На проверке)</small></span>
+                                @endif
                             </td>
                             <td width="50">{{$university->university_category}}</td>
                             <td width="275">{{$university->address}}</td>
                             <td width="100">{{$university->phone_number}}</td>
-                            <td>{{$university->university_code}}</td>
                             <td>
                                 <div class="uni_action">
                                     <a href="{!! route('university.edit',['id' => $university->id]) !!}" class="action-edit" title="Редактировать"><i class="fas fa-pencil-alt"></i></a>
-                                    <a href="{{ action('UniversityController@delete', $university->id) }}"class="action-delete" title="Удалить"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="{{ action('UniversityController@delete', $university->id) }}" class="action-delete" title="Удалить"><i class="fas fa-trash-alt"></i></a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="uni_action">
+                                    <a href="{!! route('status.verify',['id' => $university->id]) !!}" class="action-accepted" title="Верифицировать"><i class="fas fa-clipboard-check"></i></a>
+                                    <a href="{{route('status.unverify',['id' => $university->id])}}" class="action-check" title="На проверку"><i class="fas fa-recycle"></i></a>
                                 </div>
                             </td>
                         </tr>

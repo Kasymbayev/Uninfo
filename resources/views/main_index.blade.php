@@ -111,15 +111,6 @@
 
     @yield('content')
 
-<script
-        src="https://code.jquery.com/jquery-2.0.0.min.js"
-        integrity="sha256-1IKHGl6UjLSIT6CXLqmKgavKBXtr0/jJlaGMEkh+dhw="
-        crossorigin="anonymous"></script>
-<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/alertify.min.js"></script>
-<script src="https://kit.fontawesome.com/d0b98400cc.js" crossorigin="anonymous"></script>
-@include('inc.messages')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="/js/bootstrap.min.js"></script>
 <div id="footer">
     <div class="container">
         <div class="row">
@@ -160,5 +151,15 @@
         </div>
     </div>
 </div>
+<script
+        src="https://code.jquery.com/jquery-2.0.0.min.js"
+        integrity="sha256-1IKHGl6UjLSIT6CXLqmKgavKBXtr0/jJlaGMEkh+dhw="
+        crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/alertify.min.js"></script>
+<script src="https://kit.fontawesome.com/d0b98400cc.js" crossorigin="anonymous"></script>
+@include('inc.messages')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
+
 </body>
 </html>

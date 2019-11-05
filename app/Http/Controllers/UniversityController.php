@@ -115,4 +115,36 @@ class UniversityController extends Controller
             return redirect(route('admin_universities'))->with('success','Университет успешно удален!');
 
     }
+
+
+    public function statusVerify(int $id)
+    {
+        $university = Universities::find($id);
+        $university->status = '0';
+        $university->save();
+
+        // The part you
+        Universities::where('id', '=', $id)
+        ->where('status', $university->status)
+        ->update(['status' => '1']);
+
+        return redirect(route('admin_universities'))->with('success','Верификация прошла успешно!');
+    }
+
+    public function statusUnVerify(int $id)
+    {
+        $ObjUniversity = new Universities();
+        $university = $ObjUniversity->get()->find($id);
+
+        $university->status = '1';
+        $university->save();
+
+        // The part you
+        Universities::where('id', '=', $id)
+            ->where('status', $university->status)
+            ->update(['status' => '0']);
+
+        return redirect(route('admin_universities'))->with('success','Отправлена на проверку!');
+    }
+
 }

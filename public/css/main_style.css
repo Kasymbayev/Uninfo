@@ -51,11 +51,37 @@
     color: #fff;
 }
 
+.fa-clipboard-check{
+    font-size: 16px;
+    color: #fff;
+}
+
+.fa-recycle{
+    font-size: 16px;
+    color: #fff;
+}
+
 .action-delete{
     border-radius: 100%;
     padding:  10px 10px;
     background: #f70006;
     color: #fff;
+}
+
+.action-accepted{
+    border-radius: 100%;
+    padding:  10px 12px;
+    background: #079400;
+    color: #fff;
+    margin-left: 5px;
+}
+
+.action-check{
+    border-radius: 100%;
+    padding:  10px 10px;
+    background: #ff4700;
+    color: #fff;
+    margin-left: 5px;
 }
 
 .title h4{

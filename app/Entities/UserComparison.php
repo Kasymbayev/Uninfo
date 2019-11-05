@@ -5,6 +5,10 @@ namespace App\Entities;
 use App\Entities\Universities;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property array|null|string user_id
+ * @property array|null|string university_id
+ */
 class UserComparison extends Model
 {
     protected $table = 'comparison';

@@ -373,9 +373,8 @@ body{
 }
 
 .uni_card:hover{
-    margin-top: -25px;
+    margin-right: 50px;
     transition: all 0.4s ease-in;
-    box-shadow: none;
 }
 
 .uni_card:hover .status_stick_accept{
@@ -581,9 +580,16 @@ body{
 }
 
 #footer{
+
     width: 100%;
-    height: 100%;
+    height: 150px;
     background: #ffff;
+
+}
+
+.section_two{
+    width: 100%;
+    height: auto;
 }
 
 .social_icons ul > li{
@@ -956,6 +962,7 @@ body{
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+
 
 .compare_card{
     width: 289px;

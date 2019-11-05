@@ -46,19 +46,26 @@
                             <div class="uni_cards">
                                 @foreach($universities as $university)
                                     <div class="col-md-3 uni_card">
+                                        @if($university->status == 1)
                                         <div class="status_stick_accept">
                                             <div class="status_text">
                                                 <p>Верифицирован</p>
                                             </div>
                                         </div>
+                                        @else
+                                            <div class="status_stick_check">
+                                                <div class="status_text">
+                                                    <p>На проверке</p>
+                                                </div>
+                                            </div>
+                                        @endif
                                         <a href="{{route('uni.show',
+                                            [
+                                                'id' => $university->id,
+                                                'slug' => str_slug($university->title)
+                                            ]
 
-                                [
-                                    'id' => $university->id,
-                                    'slug' => str_slug($university->title)
-                                ]
-
-                                )}}">
+                                            )}}">
                                             <div class="uni_picture">
                                                 <img src="{{ asset('public/images/university_img/'.$university->university_img) }}">
                                             </div>
@@ -101,14 +108,14 @@
                     </div>
                 </div>
             @else
-                    <div class="col-md-12">
-                        <div class="section_title">
-                            <p>Администратор пополните базу!</p>
-                        </div>
+                <div class="col-md-12">
+                    <div class="section_title">
+                        <p>Администратор пополните базу!</p>
                     </div>
+                </div>
             @endif
-
         </div>
     </div>
 
 @stop
+
