@@ -6,18 +6,29 @@
 use App\Entities\UniversitySpecialty;
 use Illuminate\Support\Facades\Request;
 
-Route::get('/', 'PageController@index')->name('index');
+    Route::get('/', 'PageController@index')->name('index');
 
 
-Route::get('/admin', function (){
-    return view('auth.login');
-});
+    Route::get('/admin', function (){
+        return view('auth.login');
+    });
+
+    //Specialty
+    Route::get('/specialty', 'UserSpecialtyController@userSpecialty' )->name('specialty');
+
+    //SpecialtySort
+    Route::get('specialty/bachelor','SpecialtySortController@bachelor')->name('bachelor');
+    Route::get('specialty/magistr','SpecialtySortController@magistr')->name('magistr');
+
+    //Search
+    Route::post('/search', 'SearchController@search')->name('search');
 
 Route::group(['middleware' => 'guest'], function(){
     Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
     Route::post('/register', 'Auth\RegisterController@register');
     Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
     Route::post('/login', 'Auth\LoginController@login');
+
 });
 
 //Account Routes
@@ -41,16 +52,6 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/user/add/compare', 'UserComparisonController@addCompare')->name('add.compare');
     Route::post('/user/add/compare', 'UserComparisonController@addRequestCompare');
 
-    //Specialty
-    Route::get('/specialty', 'UserSpecialtyController@userSpecialty' )->name('specialty');
-
-    //SpecialtySort
-    Route::get('specialty/bachelor','SpecialtySortController@bachelor')->name('bachelor');
-    Route::get('specialty/magistr','SpecialtySortController@magistr')->name('magistr');
-
-    //Search
-    Route::post('/search', 'SearchController@search')->name('search'); // можно get
-
 });
 
 //Admin Routes
@@ -66,6 +67,18 @@ Route::group(['middleware' => 'admin'],function () {
     Route::get('/admin/universities','UniversityController@Universities')->name('admin_universities');
     Route::get('/admin/add/university','UniversityController@addUniversities')->name('admin_add_university');
     Route::post('/admin/add/university','UniversityController@addRequestUniversity');
+
+    //University Edit/Delete
+
+    Route::get('/admin/universities/edit/{id}','UniversityController@editUniversity')
+        ->where('id','\d+')
+        ->name('university.edit');
+
+    Route::post('/admin/universities/edit/{id}','UniversityController@editRequestUniversity')
+        ->where('id','\d+')
+        ->name('university.edit');
+
+    Route::get('/admin/universities/{id}', 'UniversityController@delete');
 
     //Categories
 

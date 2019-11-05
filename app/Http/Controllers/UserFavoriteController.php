@@ -19,8 +19,6 @@ class UserFavoriteController extends Controller
         $favorite -> university_id = Request::input('university_id');
         $favorite -> user_id = Request::input('user_id');
 
-        $favorite = UserFavorite::where('university_id');
-
         $saveFlag = $favorite->save();
         if($saveFlag)
         {

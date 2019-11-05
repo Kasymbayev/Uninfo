@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="content">
-            @if(empty($university))
+            @if(!$universities->isEmpty())
                 <div class="section_two">
                     <div class="container">
                         <div class="row">
@@ -48,7 +48,7 @@
                                     <div class="col-md-3 uni_card">
                                         <div class="status_stick_accept">
                                             <div class="status_text">
-                                                <p>На проверке</p>
+                                                <p>Верифицирован</p>
                                             </div>
                                         </div>
                                         <a href="{{route('uni.show',
@@ -101,7 +101,11 @@
                     </div>
                 </div>
             @else
-                Нет популярных
+                    <div class="col-md-12">
+                        <div class="section_title">
+                            <p>Администратор пополните базу!</p>
+                        </div>
+                    </div>
             @endif
 
         </div>

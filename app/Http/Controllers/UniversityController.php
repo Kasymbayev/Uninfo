@@ -6,6 +6,8 @@ use App\Entities\UniversityCategories;
 use App\Entities\Universities;
 use App\Entities\UniversityType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\ValidationException;
 
 
 class UniversityController extends Controller
@@ -61,9 +63,56 @@ class UniversityController extends Controller
 
         $saveFlag = $university->save();
         if($saveFlag){
-            return redirect(route('admin_universities'))->with('success','Университет успешно добавлен')
-                ->with('success','Университет успешно добавлен');
+            return redirect(route('admin_universities'))->with('success','Университет успешно добавлен');
         }
+
+    }
+
+    public function editUniversity(int $id){
+        $ObjCategories = new UniversityCategories();
+        $ObjTypes = new UniversityType();
+        $university = Universities::all()->find($id);
+        $types = $ObjTypes->get();
+        $categories = $ObjCategories->get();
+        return view('admin.university_edit',
+            [
+                'universities' => $university,
+                'types' => $types,
+                'categories' => $categories,
+            ]);
+    }
+
+
+    public function editRequestUniversity(Request $request, int $id){
+
+            $objUniversity = Universities::all()->find($id);
+
+            $objUniversity -> abbreviation = $request->input('university_abbreviation');
+            $objUniversity -> title = $request->input('university_title');
+            $objUniversity -> description = $request->input('university_descr');
+            $objUniversity -> rector = $request->input('university_rector');
+            $objUniversity -> military_dep = $request->input('military_dep');
+            $objUniversity -> address = $request->input('university_address');
+            $objUniversity -> phone_number = $request->input('university_phone');
+            $objUniversity -> fax_number = $request->input('university_fax');
+            $objUniversity -> university_type = $request->input('university_type');
+            $objUniversity -> email = $request->input('university_email');
+            $objUniversity -> website = $request->input('university_website');
+            $objUniversity -> university_code = $request->input('university_code');
+            $objUniversity -> average_grade = $request->input('university_average_grade');
+            $objUniversity -> average_price = $request->input('university_average_price');
+            $objUniversity -> university_category = $request->input('category_of_university');
+
+            if($objUniversity->save()){
+                return redirect()->route('admin_universities')->with('success','Информация изменена');
+            }
+    }
+
+    public function delete($id) {
+
+
+            Universities::where('id', $id)->delete();
+            return redirect(route('admin_universities'))->with('success','Университет успешно удален!');
 
     }
 }

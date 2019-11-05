@@ -108,7 +108,10 @@
         <span>&copy; 2019 Uninfo Team.</span>
     </div>
 </footer>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-2.0.0.min.js"
+        integrity="sha256-1IKHGl6UjLSIT6CXLqmKgavKBXtr0/jJlaGMEkh+dhw="
+        crossorigin="anonymous"></script>
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/alertify.min.js"></script>
 <script src="https://kit.fontawesome.com/d0b98400cc.js" crossorigin="anonymous"></script>
 <script src="/js/bootstrap.js"></script>

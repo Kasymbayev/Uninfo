@@ -46,8 +46,8 @@
                             <td>{{$university->university_code}}</td>
                             <td>
                                 <div class="uni_action">
-                                    <a href="#" class="action-edit" title="Редактировать"><i class="fas fa-pencil-alt"></i></a>
-                                    <a href="#" class="action-delete" title="Удалить"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="{!! route('university.edit',['id' => $university->id]) !!}" class="action-edit" title="Редактировать"><i class="fas fa-pencil-alt"></i></a>
+                                    <a href="{{ action('UniversityController@delete', $university->id) }}"class="action-delete" title="Удалить"><i class="fas fa-trash-alt"></i></a>
                                 </div>
                             </td>
                         </tr>
@@ -59,4 +59,4 @@
 
         </div>
     </main>
-@stop
+@endsection
