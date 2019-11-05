@@ -123,7 +123,6 @@ class UniversityController extends Controller
         $university->status = '0';
         $university->save();
 
-        // The part you
         Universities::where('id', '=', $id)
         ->where('status', $university->status)
         ->update(['status' => '1']);
@@ -139,7 +138,6 @@ class UniversityController extends Controller
         $university->status = '1';
         $university->save();
 
-        // The part you
         Universities::where('id', '=', $id)
             ->where('status', $university->status)
             ->update(['status' => '0']);
