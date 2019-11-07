@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-3">
                         <div class="action-button">
                             <a href="{{route('admin_add_university')}}">Добавить университет</a>
                         </div>

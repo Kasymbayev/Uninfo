@@ -400,6 +400,12 @@ body{
     position: relative;
 }
 
+
+.specialities_block a{
+    text-decoration: none;
+    color: #3a3a3a;
+}
+
 .uni_picture img{
     width: 100%;
     border-top-left-radius: 10px;
@@ -1086,12 +1092,19 @@ body{
 }
 
 .specialty_blocks{
-    width: 75%;
     height: auto;
     margin-left: 15px;
     margin-top: 15px;
     padding-bottom: 15px;
     border: 1px dashed #cccccc;
+}
+
+.specialty_blocks img{
+    height: 75px;
+    position: absolute;
+    right: 0;
+    bottom: 25%;
+    margin-right: 50px;
 }
 
 .specialty_inf{
@@ -1105,8 +1118,53 @@ body{
 
 }
 
+.specialty_blocks_show{
+    height: auto;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border: 1px dashed #cccccc;
+}
+
+.specialty_blocks_show img{
+    height: 75px;
+    position: absolute;
+    right: 0;
+    bottom: 25%;
+    margin-right: 50px;
+}
+
+.specialty_inf_show{
+    margin-left: 25px;
+}
+
+.specialty_blocks_show h3{
+    font-size: 24px;
+    font-weight: normal;
+    color: #118dff;
+
+}
+
+.learn_specialty h4{
+    color: #FF5631;
+    font-size: 28px;
+}
+
+.learn_specialty span{
+    font-size: 16px;
+    line-height: 35px;
+}
+
 .specialty_inf p{
     font-size: 16px;
+}
+
+.learn_specialty p {
+    font-size: 18px;
+}
+
+.learn_specialty span{
+    font-size: 18px;
 }
 
 .specialty_inf span{

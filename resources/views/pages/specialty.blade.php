@@ -32,14 +32,25 @@
                 <div class="row">
                     <div class="col-md-12">
                         @foreach($specialities as $speciality)
-                            <div class="specialty_blocks">
-                                <div class="specialty_inf">
-                                    <h3>{{$speciality->specialty_name}} - {{$speciality->specialty_cipher}}</h3>
-                                    <p>Направление: <span>{{$speciality->direction->direction}}</span></p>
-                                    <p>Ученая степень: <span>{{$speciality->qualification->qualification}}</span></p>
-                                    <p>Профильные предметы: <span>{{$speciality->subject->subject}}</span></p>
-                                </div>
-                                <span class="watermark">UniSpecialty</span>
+                            <div class="specialities_block">
+                                <a href="{{route('specialty.show',
+
+                            [
+                                'id' => $speciality->id,
+                                'slug' => str_slug($speciality->specialty_name)
+                            ]
+
+                            )}}">
+                                    <div class="specialty_blocks">
+                                        <div class="specialty_inf">
+                                            <h3>{{$speciality->specialty_name}} - {{$speciality->specialty_cipher}}</h3>
+                                            <p>Направление: <span>{{$speciality->direction->direction}}</span></p>
+                                            <p>Ученая степень: <span>{{$speciality->qualification->qualification}}</span></p>
+                                            <p>Профильные предметы: <span>{{$speciality->subject->subject}}</span></p>
+                                        </div>
+                                        <span class="watermark">UniSpecialty</span>
+                                    </div>
+                                </a>
                             </div>
                         @endforeach
                     </div>

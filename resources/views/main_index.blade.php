@@ -82,8 +82,6 @@
                     <div id="menu">
                         <ul class="nav navbar-nav navbar-center">
                             <li><a href="">Вузы</a></li>
-                            <li><a href="">Колледжи</a></li>
-                            <li><a href="">Курсы</a></li>
                             <li><a href="{{route('specialty')}}">Специальности</a></li>
                             <li><a href="">Профессии</a></li>
                             <li><a href="">O нас</a></li>

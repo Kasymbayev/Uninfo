@@ -18,6 +18,15 @@
         <div class="row">
             <div class="col-md-12">
                 @foreach($details as $search)
+                    <div class="specialities_block">
+                    <a href="{{route('specialty.show',
+
+                            [
+                                'id' => $search->id,
+                                'slug' => str_slug($search->specialty_name)
+                            ]
+
+                            )}}">
                     <div class="specialty_blocks">
                         <div class="specialty_inf">
                             <h3>{{$search->specialty_name}} - {{$search->specialty_cipher}}</h3>
@@ -26,6 +35,8 @@
                             <p>Профильные предметы: <span>{{$search->subject->subject}}</span></p>
                         </div>
                         <span class="watermark">UniSpecialty</span>
+                    </div>
+                    </a>
                     </div>
                 @endforeach
             </div>

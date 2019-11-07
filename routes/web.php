@@ -41,6 +41,7 @@ Route::group(['middleware' => 'auth'], function (){
     })->name('logout');
 
     Route::get('/university/{id}/{slug}', 'PageController@ShowUniversity')->name('uni.show');
+    Route::get('/specialty/{id}/{slug}', 'UserSpecialtyController@ShowSpecialty')->name('specialty.show');
 
     //Favorites
 

@@ -65,6 +65,12 @@
                             </div>
                     </div>
                 </div>
+                <div class="specialities">
+                    <div class="learn_specialty">
+                        <h4>Специальности университета</h4>
+                        <p><span>•</span> {!! $universities->specialty()->pluck('specialty_name')->implode('<br>')!!} - {!! $universities->specialty()->pluck('specialty_cipher')->implode('')!!}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

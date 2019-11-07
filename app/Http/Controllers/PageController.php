@@ -26,8 +26,6 @@ class PageController extends Controller
     public function ShowUniversity(int $id){
 
         $infUniversity = Universities::find($id);
-
-
         if(!$infUniversity){
             return abort(404);
         }

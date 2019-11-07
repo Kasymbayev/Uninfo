@@ -1,18 +1,16 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Entities\SpecialtyDirection;
 use App\Entities\Universities;
+use App\Entities\UniversityJoinSpecialty;
 use App\Entities\UniversityQualification;
 use App\Entities\UniversitySpecialty;
 use App\Entities\UniversitySubject;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 class UniversitySpecialtyController extends Controller
 {
     public function Specialty(){
-
         $ObjSpecialty = new UniversitySpecialty();
         $specialities = $ObjSpecialty->get();
         $qualifications = UniversitySpecialty::with('qualification')->get();
@@ -27,11 +25,8 @@ class UniversitySpecialtyController extends Controller
                 'subjects' => $subjects,
                 'universities' => $universities,
             ]);
-
     }
-
     public function AddSpecialty(){
-
         $ObjUniversity = new Universities();
         $ObjQualification = new UniversityQualification();
         $ObjSubject = new UniversitySubject();
@@ -47,24 +42,35 @@ class UniversitySpecialtyController extends Controller
                 'subjects' => $subjects,
                 'direction' => $direction,
             ]);
-
     }
+    public function AddRequestSpecialty(Request $request){
 
-    public function AddRequestSpecialty(){
+        $objSpecialty = new UniversitySpecialty();
+        $objUniversity_Specialty = new UniversityJoinSpecialty();
 
-        $specialty = new UniversitySpecialty();
-        $specialty -> specialty_name = Request::input('specialty_name');
-        $specialty -> specialty_cipher = Request::input('specialty_chiper');
-        $specialty -> university_id = Request::input('university_id');
+        $objSpecialty = $objSpecialty ->create([
 
-        $specialty -> direction_id = Request::input('specialty_direction');
-        $specialty -> qualification_id = Request::input('specialty_qualification');
-        $specialty -> subject_id = Request::input('subjects');
+            'specialty_name' => $request ->input('specialty_name'),
+            'specialty_cipher' => $request ->input('specialty_cipher'),
+            'direction_id' => $request ->input('specialty_direction'),
+            'qualification_id' => $request ->input('specialty_qualification'),
+            'subject_id' => $request ->input('subjects'),
 
-        $saveFlag = $specialty->save();
-        if($saveFlag){
-            return redirect(route('admin_specialty'))->with('success', 'Специальность успешно добавлена');
+        ]);
+
+
+        if($objSpecialty){
+            foreach($request->input('university_id') as $university_id){
+                $university_id = (int)$university_id;
+                $objUniversity_Specialty = $objUniversity_Specialty->create([
+                    'university_id' => $university_id,
+                    'specialty_id'  => $objSpecialty->id
+                ]);
+            }
+            return redirect(route('admin_specialty'))->with('success','Специальность успешно добавлена');
         }
+
+        return back()->with('error','Не удалось добавить специальность');
 
     }
 }

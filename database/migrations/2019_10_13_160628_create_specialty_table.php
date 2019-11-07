@@ -16,16 +16,14 @@ class CreateSpecialtyTable extends Migration
         Schema::create('specialty', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('university_id');
             $table->unsignedBigInteger('direction_id');
             $table->unsignedBigInteger('subject_id');
             $table->unsignedBigInteger('qualification_id');
             $table->string('specialty_name',255);
-            $table->string('specialty_cipher',10);
+            $table->string('specialty_cipher',255);
             $table->timestamps();
             $table->foreign('direction_id')->references('id')->on('directions');
             $table->foreign('subject_id')->references('id')->on('subjects');
-            $table->foreign('university_id')->references('id')->on('university');
             $table->foreign('qualification_id')->references('id')->on('qualification');
         });
 

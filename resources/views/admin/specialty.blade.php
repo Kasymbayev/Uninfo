@@ -25,7 +25,6 @@
                     <thead class="bg-info">
                     <tr>
                         <th scope="col">Шифр</th>
-                        <th scope="col">Университет</th>
                         <th scope="col">Специальность</th>
                         <th scope="col">Квалификация</th>
                         <th scope="col">Направление</th>
@@ -38,9 +37,6 @@
                     <tr>
                         <td>
                             {{$specialty -> specialty_cipher}}
-                        </td>
-                        <td width="150">
-                            {{$specialty -> university -> title}}
                         </td>
                         <td>
                             {{$specialty -> specialty_name}}

@@ -52,5 +52,9 @@ class Universities extends Model
         'updated_at'
     ];
 
+    public function specialty(){
+        return $this->belongsToMany('App\Entities\UniversitySpecialty','uni_specialty','university_id','specialty_id');
+    }
 
 }
+

@@ -67,7 +67,7 @@
                                 {{$specialty-> specialty_name}}
                             </td>
 
-                            <td>{{$specialty-> university-> title}}</td>
+                            <td>{!! $specialty->university()->pluck('title')->implode('<br>') !!}</td>
                         </tr>
                     @endforeach
                     </tbody>

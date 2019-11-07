@@ -23,15 +23,15 @@
                                     <input type="text" id="specialty_name" class="form-control" name="specialty_name" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="specialty_chiper">Шифр специальности</label>
-                                    <input type="text" id="specialty_chiper" class="form-control" name="specialty_chiper" required>
+                                    <label for="specialty_cipher">Шифр специальности</label>
+                                    <input type="text" id="specialty_cipher" class="form-control" name="specialty_cipher" required>
                                 </div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col-md-12">
                                     <label for="university">Выберите университет</label>
-                                    <select name="university_id" id="university" class="form-control">
+                                    <select name="university_id[]" id="university" class="form-control" multiple="multiple">
                                         @foreach($universities as $university)
                                             <option value="{{$university->id}}">{{$university->title}}</option>
                                         @endforeach

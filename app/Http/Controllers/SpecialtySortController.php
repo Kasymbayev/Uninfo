@@ -18,7 +18,7 @@ class SpecialtySortController extends Controller
 
     public function magistr(){
 
-        $specialities = UniversitySpecialty::where('qualification_id','3')->get();
+        $specialities = UniversitySpecialty::where('qualification_id','2')->get();
         return view('pages.specialty',
             ['specialities' => $specialities,
             ]);
