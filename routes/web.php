@@ -53,6 +53,11 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/user/add/compare', 'UserComparisonController@addCompare')->name('add.compare');
     Route::post('/user/add/compare', 'UserComparisonController@addRequestCompare');
 
+    //Documents
+
+    Route::get('/documents/add_document','DocumentsController@AddDocument')->name('add_document');
+    Route::post('/documents/add_document','DocumentsController@addRequestDocument');
+
 });
 
 //Admin Routes
@@ -122,7 +127,9 @@ Route::group(['middleware' => 'admin'],function () {
     Route::get('/admin/add/specialty','UniversitySpecialtyController@AddSpecialty')->name('admin_add_specialty');
     Route::post('/admin/add/specialty','UniversitySpecialtyController@AddRequestSpecialty');
 
+    //Documents
 
+    Route::get('/admin/documents','DocumentsController@document')->name('documents');
 });
 
 //University Cabinet Routes
